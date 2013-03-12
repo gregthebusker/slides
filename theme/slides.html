@@ -1,0 +1,1624 @@
+<!--
+Google IO 2012 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google IO 2012</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+<style>
+  .segue {
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+    .browser-graph .highlight,
+    .browser-graph .ie {
+      -webkit-transition: opacity 2s;
+      -moz-transition: opacity 2s;
+      -o-transition: opacity 2s;
+      transition: opacity 2s;
+    }
+
+    .browser-graph .highlight {
+      opacity: 1;
+    }
+
+    .graph-centered,
+    .vert-centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    .graph-centered {
+      left: 60%;
+    }
+</style>
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide class="logoslide nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/google_developers_logo.png"></span>
+    </article>
+  </slide>
+
+  <slide class="title-slide segue nobackground">
+    <aside class="gdbar"><img src="images/google_developers_icon_128.png"></aside>
+    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <div style="text-align: center; display: inline-block; width: 49%;">
+      <h2>Greg Schechter</h2>
+      <h2>The Web Warrior</h2>
+      <img src="images/greg.png" height="450">
+      <h3>schechter@youtube.com<h3>
+    </div>
+    <div style="text-align: center; display: inline-block; width: 49%;">
+      <h2>Zoltan Szego</h2>
+      <h2>Mobile Macropod</h2>
+      <img src="images/zoltan.png" height="450">
+      <h3>zszego@youtube.com<h3>
+    </div>
+  </slide>
+
+ <slide class="segue quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
+    <article class="flexbox vleft">
+      <h2 class="black">
+        What's Google IO about?
+      </h2>
+    </article>
+  </slide>
+
+
+  <slide class="fill nobackground" style="background-image: url(images/interns.jpg)">
+  </slide>
+
+
+  <slide class="fill nobackground" style="background-image: url(images/coolcat.jpg)">
+    <hgroup>
+      <h2 class="white">I R one C00LZ Kat</h2>
+    </hgroup>
+    <footer class="source black">http://www.flickr.com/photos/scjn/4564274827/</footer>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Last year's coolness</h2>
+    </hgroup>
+    <article>
+      <iframe data-src="http://www.youtube.com/embed/VUQSoHFMD8c?rel=0"></iframe>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>This year's awesome hardware</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <p>
+        <img src="images/nexus.png">
+      </p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Put them together</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <p>
+        <img src="images/nexuschrome.png">
+      </p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Put them together</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <p>
+        <img src="images/nexusopera.png">
+      </p>
+    </article>
+  </slide>
+
+ <slide class="segue quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
+    <article class="flexbox vleft">
+      <h2 class="black">
+        Is the coolness ready to use?
+      </h2>
+    </article>
+  </slide>
+
+  <slide class="fill nobackground" style="background-image: url(images/helmetcat.jpg)">
+    <hgroup>
+      <h2 class="white">I's ready for battlez</h2>
+    </hgroup>
+    <footer class="source white">http://www.flickr.com/photos/mycoolpics/92033686/</footer>
+  </slide>
+
+  <slide class="fill nobackground" style="background-image: url(images/html5.png)">
+    <footer class="source black">http://www.w3.org/html/logo/</footer>
+  </slide>
+
+
+  <style>
+    .html5-features svg {
+      height: 100px;
+      width: 100px;
+      display: block;
+      margin: auto;
+      -webkit-transition: fill 1s, -webkit-transform 1s;
+      -moz-transition: fill 1s, -moz-transform 1s;
+      -o-transition: fill 1s, -o-transform 1s;
+      transition: fill 1s, transform 1s;
+    }
+    .html5-features h4 {
+      text-align: center;
+      font-size: 30px;
+      font-weight: inherit;
+      color: #797979;
+    }
+    .html5-features ul {
+      overflow: hidden;
+    }
+    .html5-features li {
+      display: inline-block;
+      width: 23%;
+    }
+    .html5-features ul > li::before {
+      content: '';
+    }
+
+    .html5-features[data-step-on="1"] .multimedia,
+    .html5-features[data-step-on="2"] .used-feature {
+      fill: #F14A29;
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -o-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+
+  </style>
+  <slide class="html5-features" data-number-of-steps="2">
+    <hgroup class="flexbox vcenter">
+      <ul>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0.0 0.0 240.2 217.3" class="used-feature">
+            <path d="M130.2,0L68.5,19.9 202.2,63.2 202.2,148.5 113.1,177.3 37.9,153.0 37.9,69.4 110.6,92.9 172.3,73.0 38.4,29.6 0,42.1 0,180.6 113.1,217.2 240.2,176.1 240.2,35.5z"/>
+          </svg>
+          <h4>Graphics</h4>
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 305.5 229.5">
+            <path fill="#231F20" d="M229.5,172.5h37.9V81.5l-42.7-42.7l-26.8,26.8l31.6,31.6V172.5z M267.5,191.5 h-55.2h-77.0l-31.6-31.6l13.4-13.4l26.1,26.1h53.7l-52.9-53.0l13.5-13.5l52.9,52.9v-53.7 l-26.0-26.0l13.3-13.3L132.0,0L67.2,0.0V0L0,0.0l37.8,37.8v0.1h0.2l78.2-0.0l27.7,27.7 l-40.5,40.5l-27.7-27.7V56.9H37.8v37.2l65.6,65.6l-26.7,26.7l42.7,42.7h64.8h121.1v-0.0 L267.5,191.5z"/>
+          </svg>
+          <h4>Connectivity</h4>
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220.5 199.5" class="used-feature">
+            <path d="M32.8,0L25.4,37.0 176.0,37.0 171.3,60.9 20.6,60.9 13.3,97.9 163.9,97.9 155.5,140.1 94.8,160.2 42.2,140.1 45.8,121.8 8.8,121.8 0,166.2 87.0,199.5 187.3,166.2 200.6,99.4 203.3,86.0 220.4,0z"/>
+          </svg>
+          <h4>CSS3 Styling</h4>
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 247.2 233.1">
+           <path fill="#231F20" d="M179.2,50.1L229.3,0h-53.7l-52.0,52.0L71.5,0H17.8l50.1,50.1H0v182.9h35.7h38.7 h14.9l34.1-34.1l34.1,34.1h19.8h33.9h35.7V50.1H179.2z M123.5,145.1l-49.8,49.9h-35.7V88.1h171.1 v106.9h-35.7L123.5,145.1z"/>
+          </svg>
+          <h4>Device Access</h4>
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0.0 0.0 243.6 186.6" class="multimedia used-feature">
+            <path d="M243.4,0L189.7,0 151.7,37.9 205.4,37.9zM122.0,37.9L159.9,0 106.2,0 68.2,37.9zM205.5,148.6L37.9,148.6 37.9,38.3 76.3,0 22.5,0 0,22.5 0,186.6 243.5,186.6 243.5,37.9 205.5,37.9z"/>
+          </svg>
+          <h4>Multimedia</h4>
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 294.1 256.3" class="used-feature">
+            <path d="M294.1,79.0H246.3C226.7,31.9,180.0,0,128.1,0C57.5,0,0,57.4,0,128.1 C0,198.8,57.5,256.3,128.1,256.3c51.9,0,98.5-31.8,118.2-79.0h47.7V79.0z M256.1,139.2H128.1 c-6.1,0-11.1-4.9-11.1-11.1c0-6.1,4.9-11.1,11.1-11.1h127.9V139.2z M128.1,218.3 c-49.7,0-90.1-40.4-90.1-90.1c0-49.7,40.4-90.1,90.1-90.1c30.8,0,59.1,16.0,75.5,41.0h-75.5 c-27.0,0-49.1,22.0-49.1,49.1c0,27.0,22.0,49.1,49.1,49.1h75.5 C187.3,202.3,159.0,218.3,128.1,218.3z"/>
+          </svg>
+          <h4>Offline and Storage</h4>
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 278.28 278.31" class="used-feature">
+            <path d="M272.4,114.38L232.28,97.74l16.52-39.89c-4.22-5.90-8.78-11.48-13.80-16.56c-0.30-0.32-0.60-0.65-0.92-0.97  c-0.51-0.51-1.07-1-1.63-1.52c-4.91-4.82-10.31-9.19-16.00-13.29L176.56,42.01L159.93,1.90  c-14.45-2.44-29.03-2.50-43.14-0.35c-0.26,0.03-0.48,0.05-0.69,0.07c-0.61,0.09-1.20,0.22-1.75,0.35  L97.72,41.99L57.60,25.39c-11.98,8.55-22.39,18.83-30.89,30.44c-0.08,0.12-0.18,0.24-0.27,0.37  c-0.35,0.48-0.69,0.98-1.02,1.49l16.57,40.00L1.88,114.34c-2.40,14.45-2.48,28.99-0.35,43.09  c0.03,0.25,0.05,0.52,0.10,0.76c0.07,0.59,0.19,1.16,0.30,1.74l40.06,16.58l-16.57,39.99  c3.81,5.34,7.92,10.46,12.39,15.15c0.79,0.83,1.54,1.70,2.37,2.52c0.57,0.59,1.22,1.13,1.83,1.70  c4.82,4.69,10.13,8.94,15.7,12.93l39.97-16.56l16.58,40.05c0.59,0.12,1.22,0.23,1.82,0.37  c0.14-0.02,0.32,0.01,0.47,0.03c14.17,2.18,28.78,2.11,43.33-0.31l16.62-40.12l40.02,16.58  c0.52-0.31,1.03-0.66,1.52-1.03c0.15-0.09,0.30-0.22,0.47-0.35c11.51-8.46,21.78-18.82,30.32-30.77l-16.62-40.14  l40.06-16.58c0.10-0.57,0.23-1.18,0.34-1.80c0.02-0.18,0.02-0.37,0.05-0.55  C274.88,143.47,274.82,128.89,272.4,114.38z M239.98,144.63l-42.22,17.49l0.06,0.16l-0.14,0.05l17.50,42.20  c-3.26,3.80-6.81,7.32-10.63,10.63l-42.22-17.47l-0.05,0.14l-0.14-0.07l-17.48,42.2  c-4.99,0.37-9.97,0.35-15.02,0.02l-17.50-42.22l-0.12,0.05l-0.07-0.16l-42.35,17.55  c-0.44-0.37-0.93-0.70-1.37-1.11c-1.40-1.24-2.72-2.65-4.05-4.00c-1.33-1.33-2.72-2.61-3.99-4.02  c-0.37-0.40-0.71-0.92-1.09-1.37l17.52-42.35l-0.14-0.07l0.07-0.13l-42.23-17.49  c-0.33-5.04-0.36-10.05,0.03-15.02l42.18-17.47l-0.04-0.13l0.12-0.05L59.09,69.73  c3.31-3.81,6.84-7.37,10.62-10.62l42.22,17.47l0.05-0.12l0.12,0.05l17.50-42.22c5.04-0.35,10.04-0.35,15.03,0.02  l17.47,42.22l0.18,0.07l42.22-17.49c1.83,1.61,3.59,3.33,5.36,5.06c1.78,1.81,3.56,3.63,5.22,5.56l-17.47,42.20  l0.14,0.05l-0.06,0.16l42.21,17.47C240.34,134.60,240.35,139.61,239.98,144.63z M172.59,122.50l-0.06-0.12  l10.23-24.62c-1.87-2.21-3.97-4.26-6.19-6.23l-24.66,10.20l-0.03-0.06l-0.08,0.02l-10.20-24.64  c-2.91-0.23-5.83-0.23-8.77,0l-10.21,24.63l-0.07,0.00l-0.04,0.03l-24.65-10.17c-2.20,1.87-4.25,3.94-6.23,6.15  l10.23,24.67l-0.08,0.03l0.03,0.09l-24.73,10.26c-0.03,0.31-0.08,0.68-0.10,1.00  c-0.05,1.09-0.01,2.21-0.02,3.31c0,1.09-0.04,2.22,0.05,3.32c0,0.34,0.02,0.68,0.08,1.03l24.73,10.24l-0.00,0.11  l0.05,0.03l-10.19,24.65c1.88,2.20,3.98,4.25,6.21,6.15l24.63-10.20l0.02,0.10l0.09-0.03l10.21,24.65  c2.96,0.23,5.88,0.23,8.78,0l10.20-24.65l0.08,0.03l0.05-0.09l24.63,10.18c2.22-1.90,4.27-3.97,6.19-6.17  l-10.20-24.63l0.07-0.05l-0.03-0.09l24.63-10.20c0.10-1.48,0.12-3.00,0.14-4.45c0-1.44-0.02-2.89-0.12-4.30  L172.59,122.50z M137.15,153.76c-9.18,0-16.63-7.44-16.63-16.63c0-9.18,7.44-16.63,16.63-16.63s16.63,7.44,16.63,16.63  C153.78,146.31,146.33,153.76,137.15,153.76z"/>
+            </svg>
+          <h4>Performance and Integration</h4>
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256.155 256.155">
+            <polygon fill="black" points="128.106,0 0,64.744 0,107.32 128.106,42.577 256.155,107.32 256.155,64.744"/>
+            <polygon fill="black" points="128.106,74.316 0,139.06 0,181.636 128.106,116.893 256.155,181.636 256.155,139.06"/>
+            <polygon y="148.653" fill="black" points="128.106,148.653 0,213.397 0,255.973 128.106,191.23 256.155,255.973 256.155,213.397"/>
+          </svg>
+          <h4>Semantics</h4>
+        </li>
+      </ul>
+    </hgroup>
+  </slide>
+
+  <slide class="segue quote nobackground">
+    <article class="flexbox vleft">
+      <h2 class="black">
+        Who can use this stuff?
+      </h2>
+    </article>
+  </slide>
+
+  <slide class="segue quote nobackground">
+    <article class="flexbox vleft">
+      <h2 class="black">
+        Depends on your users
+      </h2>
+    </article>
+  </slide>
+
+
+  <style>
+    .care-graph[data-step-on="0"] .highlight,
+    .care-graph[data-step-on="1"] .ie9,
+    .care-graph[data-step-on="1"] .ie8,
+    .care-graph[data-step-on="1"] .ie7,
+    .care-graph[data-step-on="3"] .ie7 {
+      opacity: 0;
+    }
+
+    .care-graph[data-step-on="1"] .ie {
+      opacity: .5;
+    }
+
+    .care-graph[data-step-on="2"] .ie {
+      opacity: 1;
+    }
+
+    .care-graph[data-step-on="3"] .ie {
+      opacity: .7;
+    }
+
+    .care-graph .text-school,
+    .care-graph .text-job,
+    .care-graph .text-youtube {
+       display: none;
+     }
+    .care-graph[data-step-on="1"] .text-school,
+    .care-graph[data-step-on="2"] .text-job,
+    .care-graph[data-step-on="3"] .text-youtube {
+       display: block;
+    }
+  </style>
+
+  <slide class="nobackground browser-graph care-graph" data-number-of-steps="3" data-step-on="0">
+    <hgroup>
+      <h2 class="black">
+        What users I prioritize development for
+      </h2>
+      <h3 class="text-school black">
+        When I was in school
+      </h3>
+      <h3 class="text-job black">
+        My last job
+      </h3>
+      <h3 class="text-youtube black">
+        YouTube
+      </h3>
+    </hgroup>
+    <article>
+
+<svg class="graph-centered" width="1000" height="600"><g><path class="ie" d="M381,301L381,116A185,185,0,0,1,560.1878848087968,347.0076291254981L381,301A0,0,0,0,0,381,301" stroke="#ffffff" stroke-width="1" fill="#3366cc"></path><text text-anchor="start" x="500.3175317833905" y="208.2680787092657" font-family="Arial" font-size="15" stroke="none" stroke-width="0" fill="#ffffff">IE</text>
+
+<path class="ie9 highlight" d="M381,112A189,189,0,0,1,533.9042119368651,189.90858731672256" stroke="#3366cc" stroke-width="5" fill-opacity="1" fill="none"></path>
+<path class="ie8 highlight" d="M533.9042119368651,189.90858731672256A189,189,0,0,1,569.6270516729434,312.8674081910402" stroke="#3366cc" stroke-width="5" fill-opacity="1" fill="none"></path>
+<path class="ie7 highlight" d="M569.6270516729434,312.8674081910402A189,189,0,0,1,564.0622174533113,348.0023886741576" stroke="#3366cc" stroke-width="5" fill-opacity="1" fill="none"></path>
+</g>
+
+<g><path d="M381,301L357.8133517906038,117.4587802568216A185,185,0,0,1,381,116L381,301A0,0,0,0,0,381,301" stroke="#ffffff" stroke-width="1" fill="#990099"></path>
+<path class="opera highlight" d="M357.3120188563466,113.49032145156369A189,189,0,0,1,381,112" stroke="#990099" stroke-width="5" fill-opacity="1" fill="none"></path>
+</g>
+
+<g><path d="M381,301L302.2308310604615,133.6069952937864A185,185,0,0,1,357.8133517906038,117.4587802568216L381,301A0,0,0,0,0,381,301" stroke="#ffffff" stroke-width="1" fill="#109618"></path><text text-anchor="start" x="318.2743370794805" y="155.74528104774413" font-family="Arial" font-size="15" stroke="none" stroke-width="0" fill="#ffffff">Safari</text>
+<path class="safari highlight" d="M300.5277138942012,129.98768708392234A189,189,0,0,1,357.3120188563466,113.49032145156369" stroke="#109618" stroke-width="5" fill-opacity="1" fill="none"></path>
+</g>
+
+<g><path d="M381,301L201.81211519120325,347.00762912549817A185,185,0,0,1,302.23083106046136,133.60699529378647L381,301A0,0,0,0,0,381,301" stroke="#ffffff" stroke-width="1" fill="#ff9900"></path><text text-anchor="start" x="226.01061944290322" y="243.90522986989345" font-family="Arial" font-size="15" stroke="none" stroke-width="0" fill="#ffffff">Firefox</text>
+<path class="firefox highlight" d="M197.93778254668874,348.00238867415754A189,189,0,0,1,300.52771389420104,129.9876870839224" stroke="#ff9900" stroke-width="5" fill-opacity="1" fill="none"></path>
+</g>
+
+<g><path d="M381,301L560.1878848087968,347.0076291254981A185,185,0,0,1,201.81211519120325,347.00762912549817L381,301A0,0,0,0,0,381,301" stroke="#ffffff" stroke-width="1" fill="#dc3912"></path><text text-anchor="start" x="354.50000000000006" y="466.6718568263226" font-family="Arial" font-size="15" stroke="none" stroke-width="0" fill="#ffffff">Chrome</text>
+<path class="chrome highlight" d="M564.0622174533113,348.00238867415754A189,189,0,0,1,197.93778254668874,348.00238867415754" stroke="#dc3912" stroke-width="5" fill-opacity="1" fill="none"></path>
+</g>
+
+</svg>
+    </article>
+  </slide>
+
+
+  <slide class="segue quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
+    <article class="flexbox vleft">
+      <h2 class="black">
+        Why HTML5?
+      </h2>
+    </article>
+  </slide>
+
+
+  <slide class="segue quote nobackground" style="background-image: url(images/clouds.jpg); background-color: black;">
+    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
+    <article class="flexbox vleft">
+      <svg height="400px" fill="#FFF" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220.5 199.5">
+        <path d="M32.8,0L25.4,37.0 176.0,37.0 171.3,60.9 20.6,60.9 13.3,97.9 163.9,97.9 155.5,140.1 94.8,160.2 42.2,140.1 45.8,121.8 8.8,121.8 0,166.2 87.0,199.5 187.3,166.2 200.6,99.4 203.3,86.0 220.4,0z"/>
+      </svg>
+      <h2 class="centered white" style="margin-top: 80px">
+        CSS3 Styling
+      </h2>
+      <footer class="source">http://www.flickr.com/photos/dannykboyd/5048495262/</footer>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Rounded Corners</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="css">
+&lt;style&gt;
+  .somebox {
+    border-radius: 3px;
+  }
+&lt;/style&gt;
+      </pre>
+    </article>
+    <article>
+      <p>With awesomeness</p>
+      <div style="border: 10px solid #444; border-radius: 20px; width: 300px; height: 100px;"></div>
+      <p>Without awesomeness</p>
+      <div style="border: 10px solid #444; width: 300px; height: 100px;"></div>
+    </article>
+  </slide>
+
+  <style>
+    .transitions .a2 {
+      height: 0px;
+      opacity: 0;
+    }
+    .transitions .awesome.a2 {
+      -webkit-transition: height 1s, opacity 1s 1s;
+      -moz-transition: height 1s, opacity 1s 1s;
+      -o-transition: height 1s, opacity 1s 1s;
+      transition: height 1, opacity 1s 1s;
+    }
+    .transitions .a1,
+    .transitions[data-step-on="1"] .a2 {
+      height: 40px;
+      opacity: 1;
+    }
+  </style>
+
+  <slide class="transitions" data-number-of-steps="1">
+    <hgroup>
+      <h2>Transitions</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="css">
+&lt;style&gt;
+  .somebox {
+    -webkit-transition: height 1s, opacity 1s 1s;
+    -moz-transition: height 1s, opacity 1s 1s;
+    -ms-transition: height 1s, opacity 1s 1s;
+    -o-transition: height 1s, opacity 1s 1s;
+    transition: height 1, opacity 1s 1s;
+  }
+&lt;/style&gt;
+      </pre>
+    </article>
+    <article style="display: inline-block; height: 100px;">
+      <p>With Awesomeness</p>
+      <div style="border: 3px solid #444; border-radius: 3px; padding: 5px;">
+        <div class="a1">Awesome Information</div>
+        <div class="a2 awesome">New Awesome Information</div>
+      </div>
+    </article>
+    <article style="display: inline-block; height: 100px;">
+      <p>Without Awesomeness</p>
+      <div style="border: 3px solid #444; border-radius: 3px; padding: 5px;">
+        <div class="a1">Awesome Information</div>
+        <div class="a2">New Awesome Information</div>
+      </div>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>What CSS3 gets us</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Enhance the user experience</li>
+        <li>Less code</li>
+        <li>Faster preformance</li>
+        <li>Less wasted development time and less hacks</li>
+        <li>The experience without it is still good</li>
+      </ul>
+    </article>
+  </slide>
+
+
+  <slide class="segue quote nobackground">
+    <article class="flexbox vleft">
+      <h2 class="black">
+        Why HTML5?
+      </h2>
+    </article>
+  </slide>
+
+  <slide class="segue quote nobackground">
+    <article class="flexbox vleft">
+      <h2 class="black">
+        When HTML5?
+      </h2>
+    </article>
+  </slide>
+
+
+  <style>
+    .css3-graph[data-step-on="0"] .highlight,
+    .css3-graph[data-step-on="2"] .ie9,
+    .css3-graph .ie8,
+    .css3-graph .ie7 {
+      opacity: 0;
+    }
+
+    .css3-graph[data-step-on="1"] .ie {
+      opacity: .7;
+    }
+
+    .css3-graph[data-step-on="2"] .ie {
+      opacity: .3;
+    }
+
+    .css3-graph .text-round, 
+    .css3-graph .text-trans {
+       display: none;
+     }
+    .css3-graph[data-step-on="1"] .text-round,
+    .css3-graph[data-step-on="2"] .text-trans {
+       display: block;
+    }
+
+    .graph-centered {
+      position: absolute;
+      top: 50%;
+      left: 60%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    
+  </style>
+
+  <slide class="nobackground css3-graph browser-graph" data-number-of-steps="2" data-step-on="0">
+    <hgroup>
+      <h2 class="black">
+        Who can use the css3 coolness.
+      </h2>
+      <h3 class="text-round black">
+        Rounded Corners
+      </h3>
+      <h3 class="text-trans black">
+        Transitions
+      </h3>
+    </hgroup>
+    <article>
+
+<svg class="graph-centered" width="1000" height="600"><g><path class="ie" d="M381,301L381,116A185,185,0,0,1,560.1878848087968,347.0076291254981L381,301A0,0,0,0,0,381,301" stroke="#ffffff" stroke-width="1" fill="#3366cc"></path><text text-anchor="start" x="500.3175317833905" y="208.2680787092657" font-family="Arial" font-size="15" stroke="none" stroke-width="0" fill="#ffffff">IE</text>
+
+<path class="ie9 highlight" d="M381,112A189,189,0,0,1,533.9042119368651,189.90858731672256" stroke="#3366cc" stroke-width="5" fill-opacity="1" fill="none"></path>
+<path class="ie8 highlight" d="M533.9042119368651,189.90858731672256A189,189,0,0,1,569.6270516729434,312.8674081910402" stroke="#3366cc" stroke-width="5" fill-opacity="1" fill="none"></path>
+<path class="ie7 highlight" d="M569.6270516729434,312.8674081910402A189,189,0,0,1,564.0622174533113,348.0023886741576" stroke="#3366cc" stroke-width="5" fill-opacity="1" fill="none"></path>
+</g>
+
+<g><path d="M381,301L357.8133517906038,117.4587802568216A185,185,0,0,1,381,116L381,301A0,0,0,0,0,381,301" stroke="#ffffff" stroke-width="1" fill="#990099"></path>
+<path class="opera highlight" d="M357.3120188563466,113.49032145156369A189,189,0,0,1,381,112" stroke="#990099" stroke-width="5" fill-opacity="1" fill="none"></path>
+</g>
+
+<g><path d="M381,301L302.2308310604615,133.6069952937864A185,185,0,0,1,357.8133517906038,117.4587802568216L381,301A0,0,0,0,0,381,301" stroke="#ffffff" stroke-width="1" fill="#109618"></path><text text-anchor="start" x="318.2743370794805" y="155.74528104774413" font-family="Arial" font-size="15" stroke="none" stroke-width="0" fill="#ffffff">Safari</text>
+<path class="safari highlight" d="M300.5277138942012,129.98768708392234A189,189,0,0,1,357.3120188563466,113.49032145156369" stroke="#109618" stroke-width="5" fill-opacity="1" fill="none"></path>
+</g>
+
+<g><path d="M381,301L201.81211519120325,347.00762912549817A185,185,0,0,1,302.23083106046136,133.60699529378647L381,301A0,0,0,0,0,381,301" stroke="#ffffff" stroke-width="1" fill="#ff9900"></path><text text-anchor="start" x="226.01061944290322" y="243.90522986989345" font-family="Arial" font-size="15" stroke="none" stroke-width="0" fill="#ffffff">Firefox</text>
+<path class="firefox highlight" d="M197.93778254668874,348.00238867415754A189,189,0,0,1,300.52771389420104,129.9876870839224" stroke="#ff9900" stroke-width="5" fill-opacity="1" fill="none"></path>
+</g>
+
+<g><path d="M381,301L560.1878848087968,347.0076291254981A185,185,0,0,1,201.81211519120325,347.00762912549817L381,301A0,0,0,0,0,381,301" stroke="#ffffff" stroke-width="1" fill="#dc3912"></path><text text-anchor="start" x="354.50000000000006" y="466.6718568263226" font-family="Arial" font-size="15" stroke="none" stroke-width="0" fill="#ffffff">Chrome</text>
+<path class="chrome highlight" d="M564.0622174533113,348.00238867415754A189,189,0,0,1,197.93778254668874,348.00238867415754" stroke="#dc3912" stroke-width="5" fill-opacity="1" fill="none"></path>
+</g>
+
+</svg>
+    </article>
+  </slide>
+
+
+  <slide class="segue quote nobackground" style="background-image: url(images/clouds.jpg); background-color: black;">
+    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
+    <article class="flexbox vleft">
+      <svg height="400px"  fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 278.28 278.31">
+        <path d="M272.4,114.38L232.28,97.74l16.52-39.89c-4.22-5.90-8.78-11.48-13.80-16.56c-0.30-0.32-0.60-0.65-0.92-0.97  c-0.51-0.51-1.07-1-1.63-1.52c-4.91-4.82-10.31-9.19-16.00-13.29L176.56,42.01L159.93,1.90  c-14.45-2.44-29.03-2.50-43.14-0.35c-0.26,0.03-0.48,0.05-0.69,0.07c-0.61,0.09-1.20,0.22-1.75,0.35  L97.72,41.99L57.60,25.39c-11.98,8.55-22.39,18.83-30.89,30.44c-0.08,0.12-0.18,0.24-0.27,0.37  c-0.35,0.48-0.69,0.98-1.02,1.49l16.57,40.00L1.88,114.34c-2.40,14.45-2.48,28.99-0.35,43.09  c0.03,0.25,0.05,0.52,0.10,0.76c0.07,0.59,0.19,1.16,0.30,1.74l40.06,16.58l-16.57,39.99  c3.81,5.34,7.92,10.46,12.39,15.15c0.79,0.83,1.54,1.70,2.37,2.52c0.57,0.59,1.22,1.13,1.83,1.70  c4.82,4.69,10.13,8.94,15.7,12.93l39.97-16.56l16.58,40.05c0.59,0.12,1.22,0.23,1.82,0.37  c0.14-0.02,0.32,0.01,0.47,0.03c14.17,2.18,28.78,2.11,43.33-0.31l16.62-40.12l40.02,16.58  c0.52-0.31,1.03-0.66,1.52-1.03c0.15-0.09,0.30-0.22,0.47-0.35c11.51-8.46,21.78-18.82,30.32-30.77l-16.62-40.14  l40.06-16.58c0.10-0.57,0.23-1.18,0.34-1.80c0.02-0.18,0.02-0.37,0.05-0.55  C274.88,143.47,274.82,128.89,272.4,114.38z M239.98,144.63l-42.22,17.49l0.06,0.16l-0.14,0.05l17.50,42.20  c-3.26,3.80-6.81,7.32-10.63,10.63l-42.22-17.47l-0.05,0.14l-0.14-0.07l-17.48,42.2  c-4.99,0.37-9.97,0.35-15.02,0.02l-17.50-42.22l-0.12,0.05l-0.07-0.16l-42.35,17.55  c-0.44-0.37-0.93-0.70-1.37-1.11c-1.40-1.24-2.72-2.65-4.05-4.00c-1.33-1.33-2.72-2.61-3.99-4.02  c-0.37-0.40-0.71-0.92-1.09-1.37l17.52-42.35l-0.14-0.07l0.07-0.13l-42.23-17.49  c-0.33-5.04-0.36-10.05,0.03-15.02l42.18-17.47l-0.04-0.13l0.12-0.05L59.09,69.73  c3.31-3.81,6.84-7.37,10.62-10.62l42.22,17.47l0.05-0.12l0.12,0.05l17.50-42.22c5.04-0.35,10.04-0.35,15.03,0.02  l17.47,42.22l0.18,0.07l42.22-17.49c1.83,1.61,3.59,3.33,5.36,5.06c1.78,1.81,3.56,3.63,5.22,5.56l-17.47,42.20  l0.14,0.05l-0.06,0.16l42.21,17.47C240.34,134.60,240.35,139.61,239.98,144.63z M172.59,122.50l-0.06-0.12  l10.23-24.62c-1.87-2.21-3.97-4.26-6.19-6.23l-24.66,10.20l-0.03-0.06l-0.08,0.02l-10.20-24.64  c-2.91-0.23-5.83-0.23-8.77,0l-10.21,24.63l-0.07,0.00l-0.04,0.03l-24.65-10.17c-2.20,1.87-4.25,3.94-6.23,6.15  l10.23,24.67l-0.08,0.03l0.03,0.09l-24.73,10.26c-0.03,0.31-0.08,0.68-0.10,1.00  c-0.05,1.09-0.01,2.21-0.02,3.31c0,1.09-0.04,2.22,0.05,3.32c0,0.34,0.02,0.68,0.08,1.03l24.73,10.24l-0.00,0.11  l0.05,0.03l-10.19,24.65c1.88,2.20,3.98,4.25,6.21,6.15l24.63-10.20l0.02,0.10l0.09-0.03l10.21,24.65  c2.96,0.23,5.88,0.23,8.78,0l10.20-24.65l0.08,0.03l0.05-0.09l24.63,10.18c2.22-1.90,4.27-3.97,6.19-6.17  l-10.20-24.63l0.07-0.05l-0.03-0.09l24.63-10.20c0.10-1.48,0.12-3.00,0.14-4.45c0-1.44-0.02-2.89-0.12-4.30  L172.59,122.50z M137.15,153.76c-9.18,0-16.63-7.44-16.63-16.63c0-9.18,7.44-16.63,16.63-16.63s16.63,7.44,16.63,16.63  C153.78,146.31,146.33,153.76,137.15,153.76z"/>
+            </svg>
+      <h2 class="centered white" style="margin-top: 10px">
+        Performance &<br>Integration
+      </h2>
+      <footer class="source">http://www.flickr.com/photos/dannykboyd/5048495262/</footer>
+    </article>
+  </slide>
+
+
+  <slide class="segue quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
+    <article class="flexbox vleft">
+      <h2 class="black">
+        Let's talk Uploads
+      </h2>
+    </article>
+  </slide>
+
+  <slide class="fill nobackground" style="background-image: url(images/youtubeupload.png)">
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>XHR Uploads</h2>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="javascript">
+&lt;script&gt;
+  function upload(blobOrFile) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', '/server', true);
+    xhr.onload = function(e) { ... };
+
+    // Listen to the upload progress.
+    var progressBar = document.querySelector('progress');
+    xhr.upload.onprogress = function(e) {
+      if (e.lengthComputable) {
+        progressBar.value = (e.loaded / e.total) * 100;
+        progressBar.textContent = progressBar.value; // Fallback for unsupported browsers.
+      }
+    };
+
+    xhr.send(blobOrFile);
+  }
+
+&lt;/script&gt;
+      </pre>
+    </article>
+  </slide>
+
+
+ <style>
+   .xhr-demo .progress-bar {
+     background-color: white;
+     border: 1px solid #CCCCCC;
+     display: inline-block;
+     height: 15px;
+     padding: 1px;
+     vertical-align: middle;
+     width: 400px;
+   }
+   .xhr-demo .progress-bar-fill {
+      background-color: #6483DC;
+      background-repeat: repeat-x;
+      display: block;
+      height: 15px;
+      width: 0%;
+    }
+
+    .xhr-demo[data-step-on="1"] .progress-bar-fill {
+      -webkit-transition: width 0s 4s;
+    }
+    .xhr-demo[data-step-on="1"] .bar2 .progress-bar-fill {
+      -webkit-transition: width 4s;
+    }
+
+    .xhr-demo[data-step-on="1"] .progress-bar-fill {
+      width: 100%;
+    }
+ </style>
+
+  <slide class="xhr-demo" data-number-of-steps="1">
+    <hgroup>
+      <h2>XHR Uploads</h2>
+    </hgroup>
+    <article>
+        <h3 style="font-size: 150%">Oldness</h3>
+	<span>Upload progress</span>
+        <div class="progress-bar"><span class="progress-bar-fill"></span></div>
+
+        <h3 style="font-size: 150%; margin-top: 100px">Newness</h3>
+	<span>Upload progress</span>
+        <div class="progress-bar bar2"><span class="progress-bar-fill"></span></div>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Why is XHR Uploads an improvement</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Richer user experience with progress updates</li>
+        <li>Multiple file uploads</li>
+        <li>Resumable uploads</li>
+        <li>No plugin required for advance features</li>
+      </ul>
+    </article>
+  </slide>
+
+  <style>
+    .xhr-graph[data-step-on="0"] .highlight,
+    .xhr-graph .ie9,
+    .xhr-graph .ie8,
+    .xhr-graph .ie7 {
+      opacity: 0;
+    }
+
+    .xhr-graph[data-step-on="1"] .ie {
+      opacity: .3;
+    }
+    
+  </style>
+
+  <slide class="nobackground browser-graph xhr-graph" data-number-of-steps="1" data-step-on="0">
+    <hgroup>
+      <h2 class="black">
+        Who can use the XHR upload coolness.
+      </h2>
+    </hgroup>
+    <article>
+
+<svg class="graph-centered" width="1000" height="600"><g><path class="ie" d="M381,301L381,116A185,185,0,0,1,560.1878848087968,347.0076291254981L381,301A0,0,0,0,0,381,301" stroke="#ffffff" stroke-width="1" fill="#3366cc"></path><text text-anchor="start" x="500.3175317833905" y="208.2680787092657" font-family="Arial" font-size="15" stroke="none" stroke-width="0" fill="#ffffff">IE</text>
+
+<path class="ie9 highlight" d="M381,112A189,189,0,0,1,533.9042119368651,189.90858731672256" stroke="#3366cc" stroke-width="5" fill-opacity="1" fill="none"></path>
+<path class="ie8 highlight" d="M533.9042119368651,189.90858731672256A189,189,0,0,1,569.6270516729434,312.8674081910402" stroke="#3366cc" stroke-width="5" fill-opacity="1" fill="none"></path>
+<path class="ie7 highlight" d="M569.6270516729434,312.8674081910402A189,189,0,0,1,564.0622174533113,348.0023886741576" stroke="#3366cc" stroke-width="5" fill-opacity="1" fill="none"></path>
+</g>
+
+<g><path d="M381,301L357.8133517906038,117.4587802568216A185,185,0,0,1,381,116L381,301A0,0,0,0,0,381,301" stroke="#ffffff" stroke-width="1" fill="#990099"></path>
+<path class="opera highlight" d="M357.3120188563466,113.49032145156369A189,189,0,0,1,381,112" stroke="#990099" stroke-width="5" fill-opacity="1" fill="none"></path>
+</g>
+
+<g><path d="M381,301L302.2308310604615,133.6069952937864A185,185,0,0,1,357.8133517906038,117.4587802568216L381,301A0,0,0,0,0,381,301" stroke="#ffffff" stroke-width="1" fill="#109618"></path><text text-anchor="start" x="318.2743370794805" y="155.74528104774413" font-family="Arial" font-size="15" stroke="none" stroke-width="0" fill="#ffffff">Safari</text>
+<path class="safari highlight" d="M300.5277138942012,129.98768708392234A189,189,0,0,1,357.3120188563466,113.49032145156369" stroke="#109618" stroke-width="5" fill-opacity="1" fill="none"></path>
+</g>
+
+<g><path d="M381,301L201.81211519120325,347.00762912549817A185,185,0,0,1,302.23083106046136,133.60699529378647L381,301A0,0,0,0,0,381,301" stroke="#ffffff" stroke-width="1" fill="#ff9900"></path><text text-anchor="start" x="226.01061944290322" y="243.90522986989345" font-family="Arial" font-size="15" stroke="none" stroke-width="0" fill="#ffffff">Firefox</text>
+<path class="firefox highlight" d="M197.93778254668874,348.00238867415754A189,189,0,0,1,300.52771389420104,129.9876870839224" stroke="#ff9900" stroke-width="5" fill-opacity="1" fill="none"></path>
+</g>
+
+<g><path d="M381,301L560.1878848087968,347.0076291254981A185,185,0,0,1,201.81211519120325,347.00762912549817L381,301A0,0,0,0,0,381,301" stroke="#ffffff" stroke-width="1" fill="#dc3912"></path><text text-anchor="start" x="354.50000000000006" y="466.6718568263226" font-family="Arial" font-size="15" stroke="none" stroke-width="0" fill="#ffffff">Chrome</text>
+<path class="chrome highlight" d="M564.0622174533113,348.00238867415754A189,189,0,0,1,197.93778254668874,348.00238867415754" stroke="#dc3912" stroke-width="5" fill-opacity="1" fill="none"></path>
+</g>
+
+</svg>
+    </article>
+  </slide>
+
+
+
+
+  <slide class="fill nobackground" style="background-image: url(images/cooldog.jpg); background-position: center;">
+    <hgroup>
+      <h2 class="white">Time to up the coolness</h2>
+    </hgroup>
+    <footer class="source">http://www.flickr.com/photos/tjc/4320473610/</footer>
+  </slide>
+
+
+  <slide class="segue quote nobackground" style="background-image: url(images/clouds.jpg); background-color: black;">
+    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
+    <article class="flexbox vleft">
+      <svg height="400px"  fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0.0 0.0 243.6 186.6">
+        <path d="M243.4,0L189.7,0 151.7,37.9 205.4,37.9zM122.0,37.9L159.9,0 106.2,0 68.2,37.9zM205.5,148.6L37.9,148.6 37.9,38.3 76.3,0 22.5,0 0,22.5 0,186.6 243.5,186.6 243.5,37.9 205.5,37.9z"/>
+      </svg>
+      <h2 class="centered white" style="margin-top: 30px">
+        Multimedia
+      </h2>
+      <footer class="source">http://www.flickr.com/photos/dannykboyd/5048495262/</footer>
+    </article>
+  </slide>
+
+
+  <style>
+    .video-intro .computer {
+      position: absolute;
+      z-index: -1;
+      top: 7%;
+      left: 0%;
+    }
+    .video-intro .overlay-text {
+      opacity: 0;
+      color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    .video-intro[data-step-on="0"] .computer img {
+      opacity: 0;
+    }
+    .video-intro .overlay-text,
+    .video-intro .computer img {
+      -webkit-transition: opacity 1s, color 1s;
+      -ms-transition: opacity 1s, color 1s;
+      -o-transition: opacity 1s, color 1s;
+      transition: opacity 1s, color 1s;
+    }
+    .video-intro[data-step-on="0"] .video-text {
+      opacity: 1;
+      color: black;
+    }
+    .video-intro[data-step-on="1"] .video-text {
+      opacity: 1;
+      color: white;
+    }
+    .video-intro[data-step-on="2"] .cat-text {
+      opacity: 1;
+    }
+    .video-intro[data-step-on="3"] .flash-text {
+      opacity: 1;
+    }
+    .video-intro[data-step-on="4"] .html5-text {
+      opacity: 1;
+    }
+  </style>
+
+  <slide class="fill nobackground video-intro" data-number-of-steps="4" data-step-on="0">
+    <article class="flexbox vcenter computer">
+      <img src="images/computer.png">
+    </article>
+    <article class="flexbox vcenter">
+      <h2 class="overlay-text video-text">video</h2>
+      <img class="overlay-text cat-text" src="images/catwhite.png">
+      <h2 class="overlay-text flash-text">Flash</h2>
+      <h2 class="overlay-text html5-text">&lt;video&gt;</h2>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>&lt;video&gt; expectations</h2>
+    </hgroup>
+    <article>
+      <ul class="build fad">
+        <li>Open source technology
+          <ul><li>Browser / Player / Codec</ul>
+        </li>
+        <li>Lower latency
+          <ul><li>No plug-in instantiation</ul>
+        </li>
+        <li>Better performance and fidelity</li>
+        <li>Accessibility</li>
+        <li>Power Consumption*</li>
+      </ul>
+    </article>
+  </slide>
+
+  <style>
+    .browser-dist .graph {
+      -webkit-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+      -o-transform: scale(1.3);
+      transform: scale(1.3);
+    }
+  </style>
+
+  <slide class="browser-dist">
+    <hgroup>
+      <h2>HTML5 Video Capable Browsers (~75%)</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img class="graph" src="images/html5videostat.png">
+    </article>
+  </slide>
+
+  <slide class="browser-dist">
+    <hgroup>
+      <h2>Flash Support vs. HTML5 Support</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img class="graph" src="images/html5vsflash1.png">
+    </article>
+  </slide>
+
+  <slide class="browser-dist">
+    <hgroup>
+      <h2>YouTube Data API Usage for Flash vs. HTML5 Devices</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img class="graph" src="images/html5vsflash2.png">
+    </article>
+  </slide>
+
+
+  <slide class="fill nobackground" style="background-image: url(images/catphone.jpg)">
+    <hgroup>
+      <h2 class="white">Let's talk mobile</h2>
+    </hgroup>
+    <footer class="source white">http://www.flickr.com/photos/indi/2579412663/</footer>
+  </slide>
+
+  <slide class="segue quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
+    <article class="flexbox vleft">
+      <h2 class="black">
+        Why is Mobile Important
+      </h2>
+    </article>
+  </slide>
+
+  <style>
+    .mobile-stats svg {
+      position: relative;
+      top: -100px;
+      -webkit-transform: scale(.8);
+      -moz-transform: scale(.8);
+      -o-transform: scale(.8);
+      transform: scale(.8);
+    }
+  </style>
+  <slide class="mobile-stats">
+    <hgroup>
+      <h2>Playback Stats</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <svg width="900" height="600"><defs id="defs"><clipPath id="_ABSTRACT_RENDERER_ID_1"><rect x="172" y="115" width="556" height="371"></rect></clipPath></defs><rect x="0" y="0" width="900" height="600" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><rect x="748" y="115" width="132" height="52" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><rect x="748" y="115" width="132" height="20" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="776" y="132" font-family="Arial" font-size="20" stroke="none" stroke-width="0" fill="#222222">Mobile</text></g><rect x="748" y="115" width="20" height="20" stroke="none" stroke-width="0" fill="#383b42"></rect></g><g><rect x="748" y="147" width="132" height="20" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="776" y="164" font-family="Arial" font-size="20" stroke="none" stroke-width="0" fill="#222222">Desktop</text></g><rect x="748" y="147" width="20" height="20" stroke="none" stroke-width="0" fill="#bfbfbf"></rect></g></g><g><rect x="172" y="115" width="556" height="371" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g clip-path="url(#_ABSTRACT_RENDERER_ID_1)"><g><rect x="172" y="115" width="1" height="371" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="311" y="115" width="1" height="371" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="450" y="115" width="1" height="371" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="588" y="115" width="1" height="371" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="727" y="115" width="1" height="371" stroke="none" stroke-width="0" fill="#cccccc"></rect></g><g><rect x="173" y="151" width="27" height="114" stroke="none" stroke-width="0" fill="#383b42"></rect><rect x="173" y="336" width="82" height="114" stroke="none" stroke-width="0" fill="#383b42"></rect><rect x="201" y="151" width="387" height="114" stroke="none" stroke-width="0" fill="#bfbfbf"></rect><rect x="256" y="336" width="471" height="114" stroke="none" stroke-width="0" fill="#bfbfbf"></rect></g><g><rect x="172" y="115" width="1" height="371" stroke="none" stroke-width="0" fill="#333333"></rect></g></g><g></g><g><g><text text-anchor="middle" x="172.5" y="515" font-family="Arial" font-size="20" stroke="none" stroke-width="0" fill="#444444">0</text></g><g><text text-anchor="middle" x="311.25" y="515" font-family="Arial" font-size="20" stroke="none" stroke-width="0" fill="#444444">1,000</text></g><g><text text-anchor="middle" x="450" y="515" font-family="Arial" font-size="20" stroke="none" stroke-width="0" fill="#444444">2,000</text></g><g><text text-anchor="middle" x="588.75" y="515" font-family="Arial" font-size="20" stroke="none" stroke-width="0" fill="#444444">3,000</text></g><g><text text-anchor="middle" x="727.5" y="515" font-family="Arial" font-size="20" stroke="none" stroke-width="0" fill="#444444">4,000</text></g><g><text text-anchor="end" x="152" y="215" font-family="Arial" font-size="20" stroke="none" stroke-width="0" fill="#222222">2010</text></g><g><text text-anchor="end" x="152" y="400" font-family="Arial" font-size="20" stroke="none" stroke-width="0" fill="#222222">2011</text></g></g></g><g><g><text text-anchor="middle" x="450" y="566" font-family="Arial" font-size="20" font-style="italic" stroke="none" stroke-width="0" fill="#222222">Daily Playbacks (Millions)</text></g><g><text text-anchor="middle" x="61" y="300.5" font-family="Arial" font-size="20" font-style="italic" transform="rotate(-90 61 300.5)" stroke="none" stroke-width="0" fill="#222222">Year</text></g></g><g></g></svg>
+    </article>
+  </slide>
+
+
+  <slide>
+    <article class="flexbox vcenter">
+      <img src="images/flashnatvevideo.png">
+    </article>
+  </slide>
+
+  <slide>
+    <article class="flexbox vcenter">
+      <img src="images/flashvflash.png">
+    </article>
+  </slide>
+
+  <slide>
+    <article class="flexbox vcenter">
+      <img src="images/flashvflash2.png">
+    </article>
+  </slide>
+
+  <slide>
+    <article class="flexbox vcenter">
+      <img src="images/native.png">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Native</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>For fallbacks, use rtsp:// protocol (serving .3pg) if the device won't support HTML5</li>
+        <li>Use custom protocol / URL scheme to launch your own Android, iOS native app (no Windows Phone yet)
+youtube://video_id</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <article class="flexbox vcenter">
+      <img src="images/phonevideo.png">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>The Different Browsers</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/browsers1.png">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>The Different Browsers</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/browsers2.png">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>The Different Browsers</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/browsers3.png">
+    </article>
+  </slide>
+
+
+  <slide>
+    <article class="flexbox vcenter">
+      <img src="images/seriouscat.jpg">
+    </article>
+    <footer class="source">http://www.flickr.com/photos/brownpau/533267369/</footer>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>How do we start?</h2>
+    </hgroup>
+    <h2 class="vert-centered centered" style="width: 100%">
+      &lt;video&gt;
+    </h2>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>The Source</h2>
+    </hgroup>
+    <h2 class="vert-centered centered" style="width: 100%">
+      &lt;video src="funny_cat_video"&gt;
+    </h2>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>The Source</h2>
+    </hgroup>
+    <h2 class="vert-centered centered" style="width: 100%">
+      &lt;video src="funny_cat_video.<b class="red2">webm/mp4/ogg</b>"&gt;
+    </h2>
+  </slide>
+
+
+  <style>
+    .highlight-full {
+	background: -webkit-linear-gradient(top, #0BA35B 40%, #05954F 80%) no-repeat;
+	background: -moz-linear-gradient(top, #0BA35B 40%, #05954F 80%) no-repeat;
+	background: -o-linear-gradient(top, #0BA35B 40%, #05954F 80%) no-repeat;
+	background: -ms-linear-gradient(top, #0BA35B 40%, #05954F 80%) no-repeat;
+	background: linear-gradient(top, #0BA35B 40%, #05954F 80%) no-repeat;
+    }
+    .highlight-full {
+      color: white;
+    }
+    .highlight-some {
+	background: -webkit-linear-gradient(top, #FFD14D 40%, #F6C000 80%) no-repeat;
+	background: -moz-linear-gradient(top, #FFD14D 40%, #F6C000 80%) no-repeat;
+	background: -o-linear-gradient(top, #FFD14D 40%, #F6C000 80%) no-repeat;
+	background: -ms-linear-gradient(top, #FFD14D 40%, #F6C000 80%) no-repeat;
+	background: linear-gradient(top, #FFD14D 40%, #F6C000 80%) no-repeat;
+    }
+  </style>
+  <slide>
+    <hgroup>
+      <h2>Mobile Formats Support</h2>
+    </hgroup>
+    <article>
+      <table class="vert-centered">
+        <tr>
+          <th></th><th>Chrome</th><th>Safari</th><th>Firefox</th><th>Opera</th><th>IE</th><th>Android</th>
+        </tr>
+        <tr>
+          <td>H264</td><td class="highlight-full"></td><td class="highlight-full"></td><td></td><td class="highlight-full"></td><td class="highlight-full"></td><td class="highlight-full"></td>
+        </tr>
+        <tr>
+          <td>WebM</td><td class="highlight-some">Android 4+</td><td></td><td class="highlight-full"></td><td class="highlight-some">Android 4+</td><td></td><td class="highlight-some">Android 4+</td>
+        </tr>
+        <tr>
+          <td>HLS</td><td></td><td class="highlight-full"></td><td></td><td></td><td></td><td class="highlight-some">Android 3+</td>
+        </tr>
+      </table>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Platform Versions and Distribution</h2>
+    </hgroup>
+    <article>
+      <iframe data-src="http://developer.android.com/resources/dashboard/platform-versions.html"></iframe>
+    </article>
+  </slide>
+
+ <slide>
+    <hgroup>
+      <h2>The Source</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="html">
+      &lt;video&gt;
+        &lt;source src="funny_cat_video.<b class="red2">mp4</b>"&gt;
+        &lt;source src="funny_cat_video.<b class="red2">webm</b>"&gt;
+      &lt;/video&gt;
+</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Power</h2>
+    </hgroup>
+    <article>
+      <iframe data-src="http://www.youtube.com/embed/f5Fg6KFcOsU?rel=0"></iframe>
+    </article>
+  </slide>
+
+ <slide class="mobile-stats">
+    <hgroup>
+      <h2>Playback Stats</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+<svg width="900" height="600"><defs id="defs"><clipPath id="_ABSTRACT_RENDERER_ID_2"><rect x="172" y="115" width="556" height="371"></rect></clipPath></defs><rect x="0" y="0" width="900" height="600" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><rect x="748" y="115" width="132" height="52" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><rect x="748" y="115" width="132" height="20" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="776" y="132" font-family="Arial" font-size="20" stroke="none" stroke-width="0" fill="#222222">Software</text></g><rect x="748" y="115" width="20" height="20" stroke="none" stroke-width="0" fill="#383b42"></rect></g><g><rect x="748" y="147" width="132" height="20" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="776" y="164" font-family="Arial" font-size="20" stroke="none" stroke-width="0" fill="#222222">Hardware</text></g><rect x="748" y="147" width="20" height="20" stroke="none" stroke-width="0" fill="#bfbfbf"></rect></g></g><g><rect x="172" y="115" width="556" height="371" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g clip-path="url(#_ABSTRACT_RENDERER_ID_2)"><g><rect x="172" y="115" width="1" height="371" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="283" y="115" width="1" height="371" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="394" y="115" width="1" height="371" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="505" y="115" width="1" height="371" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="616" y="115" width="1" height="371" stroke="none" stroke-width="0" fill="#cccccc"></rect></g><g><rect x="173" y="130" width="66" height="22" stroke="none" stroke-width="0" fill="#383b42"></rect><rect x="173" y="204" width="476" height="22" stroke="none" stroke-width="0" fill="#383b42"></rect><rect x="173" y="278" width="138" height="22" stroke="none" stroke-width="0" fill="#383b42"></rect><rect x="173" y="352" width="487" height="22" stroke="none" stroke-width="0" fill="#383b42"></rect><rect x="173" y="426" width="304" height="22" stroke="none" stroke-width="0" fill="#383b42"></rect><rect x="-604" y="153" width="776" height="22" stroke="none" stroke-width="0" fill="#bfbfbf"></rect><rect x="173" y="227" width="143" height="22" stroke="none" stroke-width="0" fill="#bfbfbf"></rect><rect x="173" y="301" width="132" height="22" stroke="none" stroke-width="0" fill="#bfbfbf"></rect><rect x="-604" y="375" width="776" height="22" stroke="none" stroke-width="0" fill="#bfbfbf"></rect><rect x="-604" y="449" width="776" height="22" stroke="none" stroke-width="0" fill="#bfbfbf"></rect></g><g><rect x="172" y="115" width="1" height="371" stroke="none" stroke-width="0" fill="#333333"></rect></g></g><g></g><g><g><text text-anchor="middle" x="172.5" y="515" font-family="Arial" font-size="20" stroke="none" stroke-width="0" fill="#444444">700</text></g><g><text text-anchor="middle" x="283.5" y="515" font-family="Arial" font-size="20" stroke="none" stroke-width="0" fill="#444444">800</text></g><g><text text-anchor="middle" x="394.5" y="515" font-family="Arial" font-size="20" stroke="none" stroke-width="0" fill="#444444">900</text></g><g><text text-anchor="middle" x="505.50000000000006" y="515" font-family="Arial" font-size="20" stroke="none" stroke-width="0" fill="#444444">1,000</text></g><g><text text-anchor="middle" x="616.5" y="515" font-family="Arial" font-size="20" stroke="none" stroke-width="0" fill="#444444">1,100</text></g><g><text text-anchor="end" x="152" y="159.5" font-family="Arial" font-size="20" stroke="none" stroke-width="0" fill="#222222">idle</text></g><g><text text-anchor="end" x="152" y="233.5" font-family="Arial" font-size="20" stroke="none" stroke-width="0" fill="#222222">webm</text></g><g><text text-anchor="end" x="152" y="307.5" font-family="Arial" font-size="20" stroke="none" stroke-width="0" fill="#222222">h264</text></g><g><text text-anchor="end" x="152" y="381.5" font-family="Arial" font-size="20" stroke="none" stroke-width="0" fill="#222222">flash*</text></g><g><text text-anchor="end" x="152" y="455.5" font-family="Arial" font-size="20" stroke="none" stroke-width="0" fill="#222222">flash**</text></g></g></g><g><g><text text-anchor="middle" x="450" y="566" font-family="Arial" font-size="20" font-style="italic" stroke="none" stroke-width="0" fill="#222222">Mean current draw (milliamps)</text></g></g><g></g></svg>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Stick it in the page</h2>
+    </hgroup>
+    <article>
+      <iframe data-src="http://gregthebusker.com/meow/basic.html"></iframe>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Let's add a poster attribute and some click handlers</h2>
+    </hgroup>
+    <article>
+      <iframe data-src="http://gregthebusker.com/meow/posterandclick.html"></iframe>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Pro Tips</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Create your own cued state to convey you can play the video</li>
+        <li>Set the background color to black for continuity across platforms</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Controls</h2>
+    </hgroup>
+    <h2 class="vert-centered centered" style="width: 100%">
+      &lt;video controls&gt;
+    </h2>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Controls</h2>
+    </hgroup>
+    <article>
+      <iframe data-src="http://gregthebusker.com/meow/controls.html"></iframe>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Mobile Formats Support</h2>
+    </hgroup>
+    <article>
+      <table class="vert-centered">
+        <tr>
+          <th></th><th>Chrome</th><th>Safari</th><th>Firefox</th><th>Opera</th><th>IE</th><th>Android</th>
+        </tr>
+        <tr>
+          <td>Play/pause Button</td><td class="highlight-full"></td><td class="highlight-full"></td><td class="highlight-full"></td><td class="highlight-full"></td><td class="highlight-full"></td><td class="highlight-full"></td>
+        </tr>
+        <tr>
+          <td>Volume Controls</td><td></td><td class="highlight-some">Only in Fullscreen</td><td class="highlight-some">Mute toggle only</td><td class="highlight-some">Don't work in Android 4</td><td></td><td></td>
+        </tr>
+        <tr>
+          <td>Seek bar</td><td class="highlight-full"></td><td class="highlight-full"></td><td class="highlight-full"></td><td class="highlight-full"></td><td class="highlight-full"></td><td class="highlight-full"></td>
+        </tr>
+        <tr>
+          <td>Fullscreen</td><td class="highlight-full">Button</td><td class="highlight-full">Button and gesture</td><td></td><td></td><td></td><td class="highlight-full">Button</td>
+        </tr>
+        <tr>
+          <td>Playback Type</td><td class="highlight-full">Both</td><td class="highlight-some">Fullscreen only</td><td class="highlight-some">Inline only</td><td class="highlight-some">Determined by hardware</td><td class="highlight-some">Fullscreen only</td><td class="highlight-full">Both</td>
+        </tr>
+      </table>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Custom Controls</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Preserve your brand</li>
+        <li>Unified experience across platforms and browsers</li>
+      </ul>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Custom Controls</h2>
+    </hgroup>
+    <article>
+      <iframe data-src="http://gregthebusker.com/meow/custom.html"></iframe>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Custom Controls</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Preserve your brand</li>
+        <li>Unified experience across platforms and browsers</li>
+      </ul>
+      <ul class="build">
+        <li>
+          Allows us to expand the set of controls and add our own
+	  <ul>
+	    <li>Annotations</li>
+	    <li>Playlist</li>
+	    <li>Captions</li>
+	    <li>More</li>
+	  </ul>
+	</li>
+      </ul>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Custom Controls Pro Tips</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>
+          User expect to be able to drag the progress bar
+          <ul>
+            <li>Need to remender to prevent scroll on touchstart</li>
+          </ul>
+        </li>
+        <li>
+          Volume can't be set everywhere and users are accustomed to using device controls
+          <ul>
+            <li>So don't build controls for it</li>
+          </ul>
+        </li>
+        <li>
+          Fingers are fat
+          <ul>
+            <li>Average finger is 11mm so make targets at least 40px with 10px padding</li>
+            <li>Use SVG's so icons can be scaled and shared with desktop application</li>
+          </ul>
+        </li>
+        <li>
+          Don't trigger content with hover
+        </li>
+        <li>
+          Fullscreen
+          <ul>
+            <li>The browsing context is always fullscreen so fake it</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <h2 class="vert-centered centered" style="width: 100%">
+      Fullscreen
+    </h2>
+  </slide>
+
+  <slide>
+    <h2 class="vert-centered centered" style="width: 100%">
+      requestFullscreen
+    </h2>
+  </slide>
+
+  <slide>
+    <h2 class="vert-centered centered" style="width: 100%">
+      What about Mobile?
+    </h2>
+  </slide>
+
+  <slide>
+    <h2 class="vert-centered centered" style="width: 100%">
+      Isn't it already fullscreen?
+    </h2>
+  </slide>
+  <slide>
+    <h2 class="vert-centered centered" style="width: 100%">
+      Yes (sort of)
+    </h2>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Mobile Fullscreen</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Open New Tab</li>
+        <li>
+          webkitEnterFullscreen
+	  <ul>
+	    <li>Webkit only</li>
+	    <li>Video element only</li>
+	    <li>metadata must be loaded</li>
+	  </ul>
+	</li>
+        <li>
+          Remember size context changes so use viewport to scale icons and controls
+	  <ul>
+	    <li>@viewport { width: device-width; }</li>
+	  </ul>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Autoplay</h2>
+    </hgroup>
+    <h2 class="vert-centered centered" style="width: 100%">
+      &lt;video autoplay&gt;
+    </h2>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Autoplay</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/autoplayno.png">
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Autoplay</h2>
+    </hgroup>
+    <article>
+      <p>In Safari on iOS (for all devices, including iPad), where the user may be on a cellular network and be charged per data unit, preload and autoplay are disabled. No data is loaded until the user initiates it.</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Autoplay</h2>
+    </hgroup>
+    <h2 class="vert-centered centered" style="width: 100%">
+      What about everyone else?
+    </h2>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Autoplay Support</h2>
+    </hgroup>
+    <article>
+      <table class="vert-centered">
+        <tr>
+          <th></th><th>Chrome</th><th>Safari</th><th>Firefox</th><th>Opera</th><th>IE</th><th>Android</th>
+        </tr>
+        <tr>
+          <td>Attribute</td><td></td><td></td><td class="highlight-full"></td><td class="highlight-full"></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td>Scripted</td><td></td><td></td><td class="highlight-full"></td><td class="highlight-full"></td><td></td><td class="highlight-some">Buggy</td>
+        </tr>
+      </table>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Autoplay</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/point.png">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Autoplay</h2>
+    </hgroup>
+    <h2 class="vert-centered centered" style="width: 100%">
+      &lt;video onclick="this.play()"&gt;
+    </h2>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Autoplay</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img style="height: 500px" src="images/flow1.png">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Autoplay</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img style="height: 500px" src="images/flow2.png">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Autoplay</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="javascript">
+&lt;script&gt;
+  function someClickEvent(evt) {
+    // In a user initiated thread.
+    myVideoElement.load();
+    getVideoData(); // Triggers an ajax call.
+  }
+
+  function onGetVideoDataReturned(data) {
+    // Not in a user initiated thread.
+    setVideoElementSrc(data);
+    myVideoElement.load();
+    myVideoElement.play();
+  }
+&lt;/script&gt;
+      </pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Autoplay</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="javascript">
+&lt;script&gt;
+  function someClickEvent(evt) {
+    // In a user initiated thread.
+    myVideoElement.load();
+    getVideoData(); // Triggers an ajax call.
+  }
+
+  function onGetVideoDataReturned(data) {
+    // Not in a user initiated thread.
+    setVideoElementSrc(data);
+    myVideoElement.load();
+    <b>// For Android
+    window.setTimeout(function() {
+      myVideoElement.play();
+    }, 0);</b>
+  }
+&lt;/script&gt;
+      </pre>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Embeds</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>
+          &lt;script&gt;
+	  <ul>
+	    <li>We need our content to be sandboxed</li>
+	    <li>More than just a video tag</li>
+	  </ul>
+	</li>
+        <li>
+          &lt;object&gt;
+	  <ul>
+	    <li>Can load content with the data attribute</li>
+	    <li>But no way to interact with it via JavaScript</li>
+	  </ul>
+	</li>
+        <li>
+          &lt;iframe&gt;
+	  <ul>
+	    <li>Allows our content to be sandboxed</li>
+	    <li>JavaScript API communication</li>
+	  </ul>
+	</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Embeds</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="html">
+&lt;iframe type="text/html"&gt;
+  width="640"
+  height="385"
+  frameborder="0"
+  src="http://www.youtube.com/embed/VIDEO_ID"
+  <b>allowfullscreen</b>&gt;
+&lt;/iframe&gt;
+      </pre>
+      <ul class="build">
+        <li>Plan for the future (if you can)</li>
+      </ul>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Iframe Pro Tips</h2>
+    </hgroup>
+    <article class="build">
+      <pre class="prettyprint" data-lang="css">
+html {
+  /** Hack to fix iPhone resizing. */
+  overflow: hidden;
+}
+      </pre>
+      <pre class="prettyprint" data-lang="css">
+body {
+  /** Dymanic Resizing **/
+  background-color: #000;
+  height: 100%;
+  width: 100%;
+  /** Remove highlight when use clicks **/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+      </pre>
+    </article>
+  </slide>
+
+  <slide class="segue quote nobackground" style="background-image: url(images/clouds.jpg); background-color: black;">
+    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
+    <article class="flexbox vleft">
+      <svg height="400px"  fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 294.1 256.3">
+            <path d="M294.1,79.0H246.3C226.7,31.9,180.0,0,128.1,0C57.5,0,0,57.4,0,128.1 C0,198.8,57.5,256.3,128.1,256.3c51.9,0,98.5-31.8,118.2-79.0h47.7V79.0z M256.1,139.2H128.1 c-6.1,0-11.1-4.9-11.1-11.1c0-6.1,4.9-11.1,11.1-11.1h127.9V139.2z M128.1,218.3 c-49.7,0-90.1-40.4-90.1-90.1c0-49.7,40.4-90.1,90.1-90.1c30.8,0,59.1,16.0,75.5,41.0h-75.5 c-27.0,0-49.1,22.0-49.1,49.1c0,27.0,22.0,49.1,49.1,49.1h75.5 C187.3,202.3,159.0,218.3,128.1,218.3z"/>
+          </svg>
+      <h2 class="centered white" style="margin-top: 30px">
+        Offline and Storage
+      </h2>
+      <footer class="source">http://www.flickr.com/photos/dannykboyd/5048495262/</footer>
+    </article>
+  </slide>
+
+
+  <slide class="segue quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
+    <article class="flexbox vleft">
+      <h2 class="black">
+        App Cache Mobile Stuff
+      </h2>
+    </article>
+  </slide>
+
+
+  <slide class="segue quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
+    <article class="flexbox vleft">
+      <h2 class="black">
+        So is the coolness ready?
+      </h2>
+    </article>
+  </slide>
+
+
+  <slide class="segue quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
+    <article class="flexbox vleft">
+      <h2 class="black">
+        Yes
+      </h2>
+      <h3 class="black">And not only do your users want it they need it</h3>
+    </article>
+  </slide>
+
+
+  <slide class="thank-you-slide segue nobackground">
+    <aside class="gdbar right"><img src="images/google_developers_icon_128.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <h2>&lt;Thank You!&gt;</h2>
+    </article>
+    <p class="auto-fadein" data-config-contact>
+      <!-- populated from slide_config.json -->
+    </p>
+  </slide>
+
+  <slide class="fill nobackground" style="background-image: url(images/questions.jpg)">
+    <hgroup>
+      <h2 class="white">can haz question?</h2>
+    </hgroup>
+    <footer class="source white">http://www.flickr.com/photos/cloudzilla/378829651/</footer>
+  </slide>
+
+  <slide class="logoslide dark nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/google_developers_logo_white.png"></span>
+    </article>
+  </slide>
+
+  <slide class="backdrop"></slide> 
+
+</slides>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>

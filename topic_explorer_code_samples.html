@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Topics Code Samples</title>
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+    <b style="display:none">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+    </b>
+
+  <slide>
+    <hgroup>
+      <h2>Constants</h2>
+      <h3>URL's and Keys</h3>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="javascript">
+topicExplorerApp.factory('constants', function() {
+  return {
+    IFRAME_API_URL: '//www.youtube.com/iframe_api',
+    <b>GOOGLE_APIS_CLIENT_URL: 'https://apis.google.com/js/client.js?onload=',</b>
+    <b>GOOGLE_APIS_CLIENT_CALLBACK: 'onClientLoad',</b>
+    OAUTH2_CLIENT_ID: '269758065116.apps.googleusercontent.com',
+    OAUTH2_SCOPES: 'https://www.googleapis.com/auth/youtube',
+    API_KEY: 'AIzaSyAe112w0RobjC1XtoO3Os3YI6cvMZm9oKk',
+    <b>FREEBASE_API_URL: 'https://www.googleapis.com/freebase/v1/search',</b>
+    <b>YOUTUBE_API_SERVICE: 'youtube',</b>
+    <b>YOUTUBE_API_VERSION: 'v3',</b>
+    FREEBASE_API_MAX_RESULTS: 30,
+    FREEBASE_CACHE_MINUTES: 60 * 24,
+    YOUTUBE_CACHE_MINUTES: 60 * 24,
+    MIN_SCORE: 60,
+    MAX_SCORE: 100,
+    SCORE_NORMALIZATION_FACTOR: 35,
+    YOUTUBE_API_MAX_RESULTS: 50,
+    DEFAULT_PROFILE_THUMBNAIL: 'https://s.ytimg.com/yts/img/no_videos_140-vfl5AhOQY.png',
+    VIDEO_KIND: 'youtube#video',
+    CHANNEL_KIND: 'youtube#channel',
+    PLAYLIST_KIND: 'youtube#playlist',
+    YOUTUBE_VIDEO_PAGE_URL_PREFIX: 'http://youtu.be/',
+    YOUTUBE_CHANNEL_PAGE_URL_PREFIX: 'http://youtube.com/channel/',
+    YOUTUBE_PLAYLIST_PAGE_URL_PREFIX: 'http://www.youtube.com/playlist?list=',
+    DEFAULT_DISPLAY_NAME: 'Stranger'
+  };
+});
+</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Fetching Topics</h2>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="javascript">
+  $scope.topicSearch = function(searchTerm) {
+    $scope.channelResults = [];
+    $scope.playlistResults = [];
+    $scope.videoResults = [];
+
+    var data = lscache.get(searchTerm);
+    if (data) {
+      showTopics(data);
+    } else {
+      <b>var request = $http.jsonp(constants.FREEBASE_API_URL, {
+        params: {
+          query: searchTerm,
+          key: constants.API_KEY,
+          limit: constants.FREEBASE_API_MAX_RESULTS,
+          callback: 'JSON_CALLBACK'
+        }
+      });</b>
+      request.success(function(data) {
+        if (data.status == '200 OK') {
+          lscache.set(searchTerm, data, constants.FREEBASE_CACHE_MINUTES);
+          showTopics(data);
+        }
+      });
+    }
+  }
+</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h3>The Code</h3>
+    </hgroup>
+    <article class="">
+      <pre class="prettyprint" data-lang="javascript">
+var request = $http.jsonp(constants.FREEBASE_API_URL, {
+  params: {
+    query: searchTerm,
+    key: constants.API_KEY,
+    limit: constants.FREEBASE_API_MAX_RESULTS,
+    callback: 'JSON_CALLBACK'
+  }
+});
+</pre>
+    </article>
+    <hgroup>
+      <h3>The Request</h3>
+    </hgroup>
+    <article class="">
+      <pre class="prettyprint" data-lang="text">
+https://www.googleapis.com/freebase/v1/search?callback=CALLBACK&key=KEY&limit=30&query=cat
+</pre>
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+      <h3>Response</h3>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="javascript">
+{
+  "status":"200 OK",
+  <b>"result": [
+    {
+      "mid":"/m/01yrx",
+      "id":"/en/cat",
+      "name":"Cat",
+      "notable":{
+        "name":"Organism Classification",
+        "id":"/biology/organism_classification"
+      },
+      "lang":"en",
+      "score":146.867691
+    }
+  ],</b>
+  "cursor":30,
+  "cost":44,
+  "hits":45461
+}
+</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>YouTube V3</h2>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="javascript">
+return function(options) {
+    <b>options.path = [constants.YOUTUBE_API_SERVICE, constants.YOUTUBE_API_VERSION, options.service].join('/');</b>
+    var cacheKey = makeCacheKey(options.service, options.params);
+    var results = lscache.get(cacheKey);
+    if (options.method == 'GET' && results) {
+      setTimeout(function() {
+        options.callback(results)
+      }, 1);
+    } else {
+      // gapi.client.request will "helpfully" try to invoke options.callback for us automatically...
+      var callback = options.callback;
+      delete options.callback;
+
+      var cacheTimeout = constants.YOUTUBE_CACHE_MINUTES;
+      if ('cacheTimeoutMinutes' in options) {
+        cacheTimeout = options.cacheTimeoutMinutes;
+      }
+
+      <b>var request = gapi.client.request(options);</b>
+      request.execute(function(results) {
+        if (options.method == 'GET' && results && !('error' in results)) {
+          lscache.set(cacheKey, results, cacheTimeout);
+        }
+
+        callback(results);
+      });
+    }
+  };
+</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h3>Topic Clicked</h3>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="javascript">
+youtube({
+  method: 'GET',
+  service: 'search',
+  params: {
+    topicId: mid,
+    part: 'snippet',
+    maxResults: constants.YOUTUBE_API_MAX_RESULTS,
+    q: $scope.searchTerm || name
+  },
+  callback: function(response) {
+  }
+})
+</pre>
+    </article>
+
+    <hgroup>
+      <h3>Request</h3>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="text">
+https://www.googleapis.com/youtube/v3/search?topicId=%2Fm%2F01yrx&part=snippet&maxResults=50&q=cat&key=KEY
+</pre>
+
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Response</h2>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="javascript">
+{
+ "kind": "youtube#searchListResponse",
+ "etag": "\"7kXNX4JB8uyXsisu_HLlNiRaVzI/257rqVUwbrW6HkTspRJtQZ2Mwn8\"",
+ "pageInfo": {
+  "totalResults": 1000000, "resultPerPage": 50
+ },
+ "nextPageToken": "CDIQAA",
+<b> "items": [
+  {
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "ctJJrBw7e-c"
+   },
+   "kind": "youtube#searchResult",
+   "etag": "\"7kXNX4JB8uyXsisu_HLlNiRaVzI/lLxQ3kkoD4igdDyFeibPsFoYm2U\"",
+   "snippet": {
+    "publishedAt": "2011-07-09T02:18:05.000Z",
+    "channelId": "UCqhmKO6x54y8Wpw8pyhV_gw",
+    "title": "Funny cats in water, EPIC",
+    "description": "Music: Nicoleta Dara - Is it true. www.youtube.com Compozitor: www.youtube.com Вконтакте vk.com Schneider Yuri's fun snow #6: Water cats ... epic ...",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/ctJJrBw7e-c/default.jpg"
+     }
+    }
+   }
+  }]</b>
+}
+</pre>
+    </article>
+  </slide>
+
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>

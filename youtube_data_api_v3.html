@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mastering the New YouTube API</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="all" href="shared/shared.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank">
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+<style>
+  aside.gdbar img {
+    width: auto;
+  }
+</style>
+
+
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+  <slideholder data-shared-slides="logo"></slideholder>
+
+  <slide class="title-slide segue nobackground">
+    <aside class="gdbar"><img src="images/esto_logo.png"></aside>
+    <hgroup class="auto-fadein">
+      <h1 id="title-h1"></h1>
+      <p>Greg Schechter - Web Warrior, YouTube
+      </p>
+      <h1 data-config-title style="display:none"></h1>
+      <h2 data-config-subtitle style="display:none;"></h2>
+      <p data-config-presenter="" style="display:none;"></p>
+    </hgroup>
+  </slide>
+
+  <slideholder data-shared-slides="me"></slideholder>
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>Adgenda</h2>
+    </hgroup>
+    <article>
+      <ul>
+         <li>YouTube APIs</li>
+         <ul>
+           <li>The stats</li>
+           <li>What we offer</li>
+           <li>What you can build</li>
+         </ul>
+         <li>Demo</li>
+         <ul>
+           <li>Sample App</li>
+           <li>OAuth 2 & You</li>
+           <li>Overview of the New Data API</li>
+           <li>Overview of the New YouTube Analytics API</li>
+        </ul>
+      </ul>
+    </article>
+  </slide>
+
+
+  <slide class="segue quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/esto_logo.png"></aside>
+    <article class="flexbox vleft">
+      <h2 class="black">
+        YouTube APIs
+      </h2>
+    </article>
+  </slide>
+
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>YouTube APIs</h2>
+      <h3>The Stats</h3>
+    </hgroup>
+    <article>
+      <ul>
+        <li>800 million unique users visit YouTube each month.</li>
+        <li>4 billion hours watched each month.</li>
+        <li>25% of views come from mobile devices.</li>
+        <li>72 hours of video uploaded every minute.</li>
+      </ul>
+    </article>
+  </slide>
+
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>YouTube APIs</h2>
+      <h3>What we've got</h3>
+    </hgroup>
+    <article>
+      <ul>
+        <li>YouTube Upload Widget (WebCam)</li>
+          <ul>
+            <li><a href="https://developers.google.com/youtube/youtube_upload_widget">https://developers.google.com/youtube/youtube_upload_widget</a></li>
+          </ul>
+        <li>Data API</li>
+          <ul>
+            <li><a href="https://developers.google.com/youtube/v3">https://developers.google.com/youtube/v3</a></li>
+          </ul>
+        <li>Player API</li>
+          <ul>
+            <li><a href="https://developers.google.com/youtube/js_api_reference">https://developers.google.com/youtube/js_api_reference</a></li>
+          </ul>
+        <li>Analytics API</li>
+          <ul>
+            <li><a href="https://developers.google.com/youtube/analytics/">https://developers.google.com/youtube/analytics/</a></li>
+          </ul>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>YouTube APIs</h2>
+      <h3>What to do with it</h3>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Create</li>
+        <li>Curate</li>
+        <li>Consume</li>
+        <li>Analyze</li>
+    </article>
+  </slide>
+
+  <slide class="segue quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/esto_logo.png"></aside>
+    <article class="flexbox vleft">
+      <h2 class="black">
+        Create
+      </h2>
+    </article>
+  </slide>
+
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>Create</h2>
+      <h3>Talking Tom Cat</h3>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/talkingtom.png">
+    </article>
+  </slide>
+
+
+  <slide class="nobackground">
+    <hgroup>
+      <h2>Create</h2>
+      <h3>Talking Tom Cat</h3>
+    </hgroup>
+    <article class="vcenter">
+      <iframe style="height: 500px" data-src="http://www.youtube.com/embed/SaXAAztUBw0"></iframe>
+    </article>
+  </slide>
+
+
+  <slide class="segue quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/esto_logo.png"></aside>
+    <article class="flexbox vleft">
+      <h2 class="black">
+        Curate
+      </h2>
+    </article>
+  </slide>
+
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>Curate</h2>
+      <h3>YouTube Direct Lite</h3>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Open source JavaScript platform for soliciting and curating videos.</li>
+        <li>Easy to embed on any website—just add an &lt;iframe&gt; tag.</li>
+        <li>Curate submissions into playlists using the admin interface.</li>
+        <li>Live Demo: <a href="http://goo.gl/6buBa">http://goo.gl/6buBa</a></li>
+        <li>Learn more: <a href="http://goo.gl/18aYx">http://goo.gl/18aYx</a></li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h3>YouTube Direct Lite</h3> 
+    </hgroup>
+    <article>
+      <iframe style="height: 500px" src="http://goo.gl/6buBa"></iframe>
+    </article>
+  </slide>
+
+
+  <slide class="segue quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/esto_logo.png"></aside>
+    <article class="flexbox vleft">
+      <h2 class="black">
+        Consume
+      </h2>
+    </article>
+  </slide>
+
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>Consume</h2>
+      <h3>Flipboard</h3>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/flipboard.png">
+    </article>
+  </slide>
+
+  <slide class="segue quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/esto_logo.png"></aside>
+    <article class="flexbox vleft">
+      <h2 class="black">
+        Analyze
+      </h2>
+    </article>
+  </slide>
+
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>Analyze</h2>
+      <h3>YouTube Analytics API</h3>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Retrieve viewing statistics, popularity metrics, and demographic information</li>
+        <li>Build custom dashboards or reports to display YouTube Analytics data</li>
+        <li>Automate complex reporting tasks</li>
+        <li>Integrate YouTube Analytics data with other business applications</li>
+        <li>Build mobile applications that integrate YouTube Analytics data</li>
+      </ul>
+    </article>
+  </slide>
+
+
+  <slide class="nobackground">
+    <hgroup>
+      <h2>Analyize</h2>
+      <h3>Next Big Sounds</h3>
+    </hgroup>
+    <article class="vcenter">
+      <iframe style="height: 500px" data-src="http://www.youtube.com/embed/iO9VI78zmPQ"></iframe>
+    </article>
+  </slide>
+
+
+  <slide class="segue quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/esto_logo.png"></aside>
+    <article class="flexbox vleft">
+      <h2 class="black">
+        Let's Build Something
+      </h2>
+    </article>
+  </slide>
+
+
+  <slide class="segue quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/esto_logo.png"></aside>
+    <article class="flexbox vleft">
+      <h2 class="black">
+        Prerequisites
+      </h2>
+    </article>
+  </slide>
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>Prerequisites</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Knowledge of HTML, JavaScript, and the jQuery Library</li>
+        <li>A Google and YouTube account</li> 
+      </ul>
+    </article>
+  </slide>
+
+
+  <slide class="segue quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/esto_logo.png"></aside>
+    <article class="flexbox vleft">
+      <h2 class="black">
+        Let's look at a sample
+      </h2>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Finished Demo</h2>
+    </hgroup>
+    <article>
+      <iframe data-src="youtube_v3_demo/demo.html#"></iframe>
+    </article>
+  </slide>
+
+  <slide class="segue quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/esto_logo.png"></aside>
+    <article class="flexbox vleft">
+      <h2 class="black">
+        Oauth 2 & You
+      </h2>
+    </article>
+  </slide>
+
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>OAUTH 2</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Authentication and authorization are both handled via the OAuth 2 protocol for all modern Google APIs.</li>
+        <li>
+          <ul>
+            <li>Unlike older GData APIs, OAuth 2 is the only supported means of auth.</li>
+          </ul>
+        </li>
+        <li>Login and authorization happen in a web page hosted via HTTPS on google.com, to ensure that your credentials aren't shared with any third parties.</li>
+        <li>Access tokens expire and need to be periodically refreshed, which limits the exposure if an access token is compromised.</li>
+        <li>
+          <ul>
+            <li>Google APIs client libraries handle token bookkeeping for you!</li>
+          </ul>
+        </li>
+        <li>Different OAuth 2 flows depending on application type:</li>
+        <li>
+          <ul>
+            <li>Client flow is used in JavaScript-only web applications that can't store refresh tokens.</li>
+            <li>Installed application flow is used with desktop/command line applications.</li>
+          </ul>
+        </li>
+        <li>To support OAuth 2 in your app, you need to register in the API Access section of the Google API Console.</li>
+      </ul>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>OAUTH</h2>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="html">
+&lt;script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"&gt;&lt;/script&gt;
+</pre>
+
+      <pre class="prettyprint" data-lang="javascript">
+var OAUTH2_CLIENT_ID = '772387827464.apps.googleusercontent.com';
+var OAUTH2_SCOPES = [
+  'https://www.googleapis.com/auth/youtube',
+  'https://www.googleapis.com/auth/yt-analytics.readonly'
+];
+
+googleApiClientReady = function() {
+  gapi.auth.init(function() {
+    window.setTimeout(checkAuth, 1);
+  });
+}
+
+function checkAuth() {
+  gapi.auth.authorize({
+    client_id: OAUTH2_CLIENT_ID,
+    scope: OAUTH2_SCOPES,
+    immediate: true
+  }, handleAuthResult);
+}
+
+</pre>
+    </article>
+  </slide>
+
+
+  <slide class="segue quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/esto_logo.png"></aside>
+    <article class="flexbox vleft">
+      <h2 class="black">
+        YouTube Data API
+      </h2>
+    </article>
+  </slide>
+
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>YouTube Data API</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>RESTful (based on JSON)</li>
+        <li>Simple</li>
+        <li>Concise (optimized for bandwidth)</li>
+        <li>No two fields with the same information</li>
+        <li>Many fine-grained simple calls</li>
+        <li>Simple URL schemes for each collection</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>OAUTH</h2>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="javascript">
+gapi.client.load('youtube', 'v3', function() {
+  gapi.client.load('youtubeAnalytics', 'v1', function() {
+    handleAPILoaded();
+  });
+});
+</pre>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Data API</h2>
+      <h3>Channels API</h3>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="javascript">
+var request = gapi.client.youtube.channels.list({
+  mine: '',
+  part: 'contentDetails,id'
+});
+request.execute(function(response) {
+  playlistId = response.result.items[0].contentDetails.uploads;
+  channelId = response.result.items[0].id;
+  requestVideoPlaylist(playlistId);
+});
+</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2></h2>
+      <h3></h3>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="javascript">
+<b>var requestOptions = {
+  playlistId: playlistId,
+  part: 'snippet,id',
+  maxResults: 10
+};
+if (pageToken) {
+  requestOptions.pageToken = pageToken;
+}
+var request = gapi.client.youtube.playlistItems.list(requestOptions);
+request.execute(function(response) {
+  var playlistItems = response.result.items;</b>
+  if (playlistItems) {
+    // For each result lets show a thumbnail.
+    jQuery.each(playlistItems, function(index, item) {
+      createVideoListItem(item.snippet);
+    });
+    getDataForVideos();
+  } else {
+    $('#video-container').html('Sorry you have no uploaded videos');
+  }
+});
+</pre>
+    </article>
+  </slide>
+
+
+  <slide class="segue quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/esto_logo.png"></aside>
+    <article class="flexbox vleft">
+      <h2 class="black">
+        YouTube Analytics API
+      </h2>
+    </article>
+  </slide>
+
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>YouTube Analytics API</h2>
+    </hgroup>
+    <article>
+      <ul>
+	<li>The API consists of a single authenticated GET method that returns the result in a table like response (as JSON or CSV)</li>
+	<li>The HTTP parameters are similar to the Google Analytics API</li>
+	<li>Developers specify what data they want</li>
+	<li>Very flexible interface that allows you to specify many different queries</li>
+	<li>Only a limited number of queries are supported. You will need to work with the documentation to see what queries are supported</li>
+	<li>The API is not complete yet and we strive to make all our relevant reporting data available through the API</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>YouTube Analytics API</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/cube.png">
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2></h2>
+      <h3></h3>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="javascript">
+  var now = new Date(), y = now.getFullYear(), m = now.getMonth() + 1, d = now.getDate();
+  var endDate = y + '-' + ( m <= 9 ? '0' + m : m) + '-' + (d <= 9 ? '0' + d : d);
+  var startTime = new Date(), startTime.setFullYear(now.getFullYear() - 1), y = startTime.getFullYear(), m = startTime.getMonth() + 1, d = startTime.getDate();
+  var startDate = y + '-' + ( m <= 9 ? '0' + m : m) + '-' + (d <= 9 ? '0' + d : d);
+
+  var metrics = $('#metrics').val();
+<b>
+  var requestOptions = {
+    'ids': 'channel==' + channelId,
+    'metrics': metrics,
+    'dimensions': 'country',
+    'start-date': startDate,
+    'end-date': endDate
+  };
+  if (id) {
+    requestOptions['filters'] = 'video==' + id;
+  }
+  var request = gapi.client.youtubeAnalytics.reports.query(requestOptions);
+  request.execute(function(response) {
+    drawGraph(response.result);
+  });
+</b>
+</pre>
+    </article>
+  </slide>
+
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>Resources</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Search for "YouTube API"</li>
+        <li>Documentation <a href="developers.google.com/youtube">developers.google.com/youtube</a></li>
+        <li>Weekly Live Show <a href="developers.google.com/live/youtube">developers.google.com/live/youtube</a></li>
+        <li>Google+ <a href="google.com/+YouTubeDev">google.com/+YouTubeDev</a><li>
+        <li>Blog <a href="apiblog.youtube.com">apiblog.youtube.com</a></li>
+      </ul>
+    </article>
+  </slide>
+
+
+  <slideholder data-shared-slides="end"></slideholder>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+</body>
+</html>
+

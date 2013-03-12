@@ -1,0 +1,44 @@
+<group id="group-logo">
+  <slide id="logo" class="logoslide nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/google_developers_logo.png"></span>
+    </article>
+  </slide>
+</group>
+
+<group id="group-me">
+  <slide id="me" class="fill nobackground">
+    <div style="text-align: center; display: inline-block; width: 99%;">
+      <h2>Greg Schechter</h2>
+      <h2>The Web Warrior</h2>
+      <img src="images/greg.png" height="450">
+      <h3>schechter@youtube.com<h3>
+    </div>
+  </slide>
+</group>
+
+
+<group id="end">
+  <slide id="thank-you" class="thank-you-slide segue nobackground">
+    <aside class="gdbar right"><img src="images/google_developers_icon_128.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <h2>&lt;Thank You!&gt;</h2>
+    </article>
+    <p class="auto-fadein" data-config-contact>
+      <!-- populated from slide_config.json -->
+    </p>
+  </slide>
+
+  <slide id="questions" class="fill nobackground" style="background-image: url(images/questions.jpg)">
+    <hgroup>
+      <h2 class="white">can haz question?</h2>
+    </hgroup>
+    <footer class="source white">http://www.flickr.com/photos/cloudzilla/378829651/</footer>
+  </slide>
+
+  <slide id="end-slide" class="logoslide dark nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/google_developers_logo_white.png"></span>
+    </article>
+  </slide>
+</group>
