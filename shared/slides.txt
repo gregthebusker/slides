@@ -17,8 +17,8 @@
   </slide>
 </group>
 
-<group id="mobile-intro">
-  <slide class="fill nobackground video-intro" data-number-of-steps="4" data-step-on="0">
+<group id="mobile-intro-group">
+  <slide class="fill nobackground mobile-intro" data-number-of-steps="4" data-step-on="0">
     <article class="flexbox vcenter computer">
       <img src="images/computer.png">
     </article>
