@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mobile Meow: Bringing Videos to a Mobile World</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="all" href="shared/shared.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+  <slideholder data-shared-slides="logo"></slideholder>
+
+  <slide class="title-slide segue nobackground">
+    <aside class="gdbar"><img src="images/google_developers_icon_128.png"></aside>
+    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 id="title-h1"></h1>
+      <p>Greg Schechter - Web Warrior, YouTube
+      </p>
+      <h1 data-config-title style="display:none"></h1>
+      <h2 data-config-subtitle style="display:none;"></h2>
+      <p data-config-presenter="" style="display:none;"></p>
+    </hgroup>
+  </slide>
+
+  <slideholder data-shared-slides="me"></slideholder>
+
+  <slideholder data-shared-slides="mobile-intro"></slideholder>
+
+
+  <slideholder data-shared-slides="end"></slideholder>
+
+
+  <slide class="backdrop"></slide> 
+
+</slides>
+
+</body>
+</html>
+

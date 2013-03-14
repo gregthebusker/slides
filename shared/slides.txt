@@ -12,8 +12,183 @@
       <h2>Greg Schechter</h2>
       <h2>The Web Warrior</h2>
       <img src="images/greg.png" height="450">
-      <h3>schechter@youtube.com<h3>
+      <h3>schechter@fb.com<h3>
     </div>
+  </slide>
+</group>
+
+<group id="mobile-intro">
+  <slide class="fill nobackground video-intro" data-number-of-steps="4" data-step-on="0">
+    <article class="flexbox vcenter computer">
+      <img src="images/computer.png">
+    </article>
+    <article class="flexbox vcenter">
+      <h2 class="overlay-text video-text">video</h2>
+      <img class="overlay-text cat-text" src="images/catwhite.png">
+      <h2 class="overlay-text flash-text">Flash</h2>
+      <h2 class="overlay-text html5-text">&lt;video&gt;</h2>
+    </article>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h2>&lt;video&gt; expectations</h2>
+    </hgroup>
+    <article>
+      <ul class="build fad">
+        <li>Open source technology
+          <ul><li>Browser / Player / Codec</ul>
+        </li>
+        <li>Lower latency
+          <ul><li>No plug-in instantiation</ul>
+        </li>
+        <li>Better performance and fidelity</li>
+        <li>Accessibility</li>
+        <li>Power Consumption*</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="nobackground browser-graph video-graph" data-number-of-steps="1" data-step-on="0">
+    <hgroup>
+      <h2 class="black">
+        HTML5 Video Capable Browsers
+      </h2>
+    </hgroup>
+    <article>
+      <div class="graph-centered browser-circles">
+        <div class="browser-circle chrome">Chrome</div>
+        <div class="browser-circle ff">Firefox</div>
+        <div class="browser-circle safari">Safari</div>
+        <div class="browser-circle opera">Opera</div>
+        <div class="browser-circle ie">IE</div>
+        <div class="text-percent vert-centered circle-text">~80%</div>
+      </div>
+    </article>
+  </slide>
+
+
+  <slide class="browser-dist">
+    <hgroup>
+      <h2>Flash Support vs. HTML5 Support</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img class="graph" src="images/html5vsflash1.png">
+    </article>
+  </slide>
+
+  <slide class="browser-dist">
+    <hgroup>
+      <h2>YouTube Data API Usage for Flash vs. HTML5 Devices</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img class="graph" src="images/html5vsflash2.png">
+    </article>
+  </slide>
+
+
+  <slide class="fill nobackground" style="background-image: url(images/catphone.jpg)">
+    <hgroup>
+      <h2 class="white">Let's talk mobile</h2>
+    </hgroup>
+    <footer class="source white">http://www.flickr.com/photos/indi/2579412663/</footer>
+  </slide>
+
+  <slide class="segue quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
+    <article class="flexbox vleft">
+      <h2 class="black">
+        Why is Mobile Important
+      </h2>
+    </article>
+  </slide>
+
+  <slide class="mobile-stats">
+    <hgroup>
+      <h2>Playback Stats</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+<svg width="1200" height="600" style="overflow: hidden; "><defs id="defs"><clipPath id="_ABSTRACT_RENDERER_ID_0"><rect x="200" y="115" width="800" height="371"></rect></clipPath></defs><rect x="0" y="0" width="1200" height="600" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><rect x="1028" y="115" width="144" height="73" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><rect x="1028" y="115" width="144" height="28" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="1067" y="138.8" font-family="Arial" font-size="28" stroke="none" stroke-width="0" fill="#222222">Mobile</text></g><rect x="1028" y="115" width="28" height="28" stroke="none" stroke-width="0" fill="#dc3912"></rect></g><g><rect x="1028" y="160" width="144" height="28" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="1067" y="183.8" font-family="Arial" font-size="28" stroke="none" stroke-width="0" fill="#222222">Desktop</text></g><rect x="1028" y="160" width="28" height="28" stroke="none" stroke-width="0" fill="#3366cc"></rect></g></g><g><rect x="200" y="115" width="800" height="371" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g clip-path="url(#_ABSTRACT_RENDERER_ID_0)"><g><rect x="200" y="485" width="800" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="200" y="393" width="800" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="200" y="300" width="800" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="200" y="208" width="800" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="200" y="115" width="800" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect></g><g><g><path d="M200.5,485.5L200.5,226.5L999.5,171L999.5,485.5L200.5,485.5" stroke="none" stroke-width="0" fill-opacity="0.3" fill="#3366cc"></path></g><g><path d="M200.5,226.5L200.5,208L999.5,115.5L999.5,171L200.5,226.5" stroke="none" stroke-width="0" fill-opacity="0.3" fill="#dc3912"></path></g></g><g><rect x="200" y="485" width="800" height="1" stroke="none" stroke-width="0" fill="#333333"></rect></g><g><path d="M200.5,226.5L999.5,171" stroke="#3366cc" stroke-width="2" fill-opacity="1" fill="none"></path><path d="M200.5,208L999.5,115.5" stroke="#dc3912" stroke-width="2" fill-opacity="1" fill="none"></path></g></g><g></g><g><g><text text-anchor="middle" x="200.5" y="526.8" font-family="Arial" font-size="28" stroke="none" stroke-width="0" fill="#222222">2010</text></g><g><text text-anchor="middle" x="999.5" y="526.8" font-family="Arial" font-size="28" stroke="none" stroke-width="0" fill="#222222">2011</text></g><g><text text-anchor="end" x="172" y="495.3" font-family="Arial" font-size="28" stroke="none" stroke-width="0" fill="#444444">0</text></g><g><text text-anchor="end" x="172" y="402.8" font-family="Arial" font-size="28" stroke="none" stroke-width="0" fill="#444444">1,000</text></g><g><text text-anchor="end" x="172" y="310.3" font-family="Arial" font-size="28" stroke="none" stroke-width="0" fill="#444444">2,000</text></g><g><text text-anchor="end" x="172" y="217.8" font-family="Arial" font-size="28" stroke="none" stroke-width="0" fill="#444444">3,000</text></g><g><text text-anchor="end" x="172" y="125.3" font-family="Arial" font-size="28" stroke="none" stroke-width="0" fill="#444444">4,000</text></g></g></g><g><g><text text-anchor="middle" x="600" y="575.3" font-family="Arial" font-size="28" font-style="italic" stroke="none" stroke-width="0" fill="#222222">Year</text></g><g><text text-anchor="middle" x="59.8" y="300.5" font-family="Arial" font-size="28" font-style="italic" transform="rotate(-90 59.8 300.5)" stroke="none" stroke-width="0" fill="#222222">Playbacks in Millions</text></g></g><g></g></svg>
+    </article>
+  </slide>
+
+
+  <slide>
+    <article class="flexbox vcenter">
+      <img src="images/flashnatvevideo.png">
+    </article>
+  </slide>
+
+  <slide>
+    <article class="flexbox vcenter">
+      <img src="images/flashvflash.png">
+    </article>
+  </slide>
+
+  <slide>
+    <article class="flexbox vcenter">
+      <img src="images/flashvflash2.png">
+    </article>
+  </slide>
+
+  <slide>
+    <article class="flexbox vcenter">
+      <img src="images/native.png">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Native</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>For fallbacks, use rtsp:// protocol (serving .3gp) if the device won't support HTML5</li>
+        <li>Use custom protocol / URL scheme to launch the native app (on Android / BB: <code>vnd.youtube:video_id</code>)</li>
+        <li>iOS special-cases the YouTube Flash embed code</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <article class="flexbox vcenter">
+      <img src="images/phonevideo.png">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>The Different Browsers</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/browsers1.png">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>The Different Browsers</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/browsers2.png">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>The Different Browsers</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/browsers3.png">
+    </article>
+  </slide>
+
+
+  <slide>
+    <article class="flexbox vcenter">
+      <img src="images/seriouscat.jpg">
+    </article>
+    <footer class="source">http://www.flickr.com/photos/brownpau/533267369/</footer>
   </slide>
 </group>
 
