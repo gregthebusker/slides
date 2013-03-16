@@ -941,8 +941,7 @@ body {
       <ul>
         <li>GET parameters on cached resources bypass the cache</li>
         <li>Strict implementations (eg. iOS5) refuse to download files not in the manifest</li>
-        <li class="li2">since YouTube streams from many domains, we just put <pre>NETWORK:
-*</pre></li>
+        <li class="li2">since YouTube streams from many domains, we just put <pre>NETWORK: *</pre></li>
       </ul>
       <ul>
         <li>Can get wrong in a scary way</li>
