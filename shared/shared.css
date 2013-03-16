@@ -208,3 +208,6 @@ slides slide.title-slide::after {
   .play-code-snippet[data-step-on="1"] .play-magic-line {
     color: red;
   }
+  
+  
+    .li2 { margin-left: 3em; }
