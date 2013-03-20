@@ -6,13 +6,14 @@ aside.gdbar img {
 
 
 slides slide:not(.nobackground):before {
-  content: "#codemotion";
+  content: "#codemotion http://creativecommons.org/licenses/by-nc-sa/3.0/";
   background: url(../../images/codemotion_rome/logo_square.png) no-repeat 0 50%;
   -webkit-background-size: 30px 30px;
   -moz-background-size: 30px 30px;
   -o-background-size: 30px 30px;
   background-size: 30px 30px;
 }
+
 
 
 .html5-features[data-step-on="3"] .multimedia,
