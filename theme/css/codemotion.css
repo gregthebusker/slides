@@ -30,3 +30,7 @@ slides slide:not(.nobackground):before {
   -o-transform: scale(1.2);
   transform: scale(1.2);
 }
+
+.logoslide img {
+  height: auto;
+}
