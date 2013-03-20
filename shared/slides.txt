@@ -1,5 +1,5 @@
 <group id="group-logo">
-  <slide id="logo" class="logoslide">
+  <slide id="logo" class="logoslide nobackground">
     <article class="flexbox vcenter">
       <span><img class="big-logo" src="images/google_developers_logo.png" /></span>
     </article>
@@ -18,7 +18,7 @@
 </group>
 
 <group id="html5-intro-group">
-  <slide class="fill" style="background-image: url(images/html5.png)">
+  <slide class="fill nobackground" style="background-image: url(images/html5.png)">
     <footer class="source black">http://www.w3.org/html/logo/</footer>
   </slide>
 
@@ -81,7 +81,7 @@
 </group>
 
 
-  <slide id="multimedia-title" class="segue quote" style="background-image: url(images/clouds.jpg); background-color: black;">
+  <slide id="multimedia-title" class="segue quote nobackground" style="background-image: url(images/clouds.jpg); background-color: black;">
     <aside class="gdbar right bottom"><img class="small-logo" src="images/google_developers_icon_128.png"></aside>
     <article class="flexbox vleft">
       <svg height="400px"  fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0.0 0.0 243.6 186.6">
@@ -126,7 +126,7 @@
     </article>
   </slide>
 
-  <slide class="nobackground browser-graph video-graph" data-number-of-steps="1" data-step-on="0">
+  <slide class="browser-graph video-graph" data-number-of-steps="1" data-step-on="0">
     <hgroup>
       <h2 class="black">
         HTML5 Video Capable Browsers
@@ -164,7 +164,7 @@
   </slide>
 
 
-  <slide class="fill" style="background-image: url(images/catphone.jpg)">
+  <slide class="fill nobackground" style="background-image: url(images/catphone.jpg)">
     <hgroup>
       <h2 class="white">Let's talk mobile</h2>
     </hgroup>
@@ -916,7 +916,7 @@ body {
 </group>
 
 <group id="appcache-group">
-  <slide class="segue quote" style="background-image: url(images/clouds.jpg); background-color: black;">
+  <slide class="segue quote nobackground" style="background-image: url(images/clouds.jpg); background-color: black;">
     <aside class="gdbar right bottom"><img class="small-logo" src="images/google_developers_icon_128.png"></aside>
     <article class="flexbox vleft">
       <svg height="400px"  fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 294.1 256.3">
@@ -1023,7 +1023,7 @@ body {
 
 
 <group id="end">
-  <slide id="thank-you" class="thank-you-slide segue">
+  <slide id="thank-you" class="thank-you-slide segue nobackground">
     <aside class="gdbar right"><img class="small-logo" src="images/google_developers_icon_128.png" /></aside>
     <article class="flexbox vleft auto-fadein">
       <h2>&lt;Thank You!&gt;</h2>
@@ -1033,14 +1033,14 @@ body {
     </p>
   </slide>
 
-  <slide id="questions" class="fill" style="background-image: url(images/questions.jpg)">
+  <slide id="questions" class="fill nobackground" style="background-image: url(images/questions.jpg)">
     <hgroup>
       <h2 class="white">can haz question?</h2>
     </hgroup>
     <footer class="source white">http://www.flickr.com/photos/cloudzilla/378829651/</footer>
   </slide>
 
-  <slide id="end-slide" class="logoslide dark">
+  <slide id="end-slide" class="logoslide dark nobackground">
     <article class="flexbox vcenter">
       <span><img class="big-logo" src="images/google_developers_logo_white.png" /></span>
     </article>
