@@ -145,7 +145,7 @@
   </slide>
 
 
-  <slide class="browser-dist">
+  <slide class="browser-dist nobackground">
     <hgroup>
       <h2>Flash Support vs. HTML5 Support</h2>
     </hgroup>
@@ -154,7 +154,7 @@
     </article>
   </slide>
 
-  <slide class="browser-dist">
+  <slide class="browser-dist nobackground">
     <hgroup>
       <h2>YouTube Data API Usage for Flash vs. HTML5 Devices</h2>
     </hgroup>
