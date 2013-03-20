@@ -1,7 +1,7 @@
 <group id="group-logo">
   <slide id="logo" class="logoslide nobackground">
     <article class="flexbox vcenter">
-      <span><img src="images/google_developers_logo.png" /></span>
+      <span><img class="big-logo" src="images/google_developers_logo.png" /></span>
     </article>
   </slide>
 </group>
@@ -82,7 +82,7 @@
 
 
   <slide id="multimedia-title" class="segue quote nobackground" style="background-image: url(images/clouds.jpg); background-color: black;">
-    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
+    <aside class="gdbar right bottom"><img class="small-logo" src="images/google_developers_icon_128.png"></aside>
     <article class="flexbox vleft">
       <svg height="400px"  fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0.0 0.0 243.6 186.6">
         <path d="M243.4,0L189.7,0 151.7,37.9 205.4,37.9zM122.0,37.9L159.9,0 106.2,0 68.2,37.9zM205.5,148.6L37.9,148.6 37.9,38.3 76.3,0 22.5,0 0,22.5 0,186.6 243.5,186.6 243.5,37.9 205.5,37.9z"/>
@@ -172,7 +172,7 @@
   </slide>
 
   <slide class="segue quote nobackground">
-    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png" /></aside>
+    <aside class="gdbar right bottom"><img class="small-logo" src="images/google_developers_icon_128.png" /></aside>
     <article class="flexbox vleft">
       <h2 class="black">
         Why is Mobile Important
@@ -829,7 +829,7 @@
 
 
   <slide class="segue quote nobackground">
-    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
+    <aside class="gdbar right bottom"><img class="small-logo" src="images/google_developers_icon_128.png"></aside>
     <article class="flexbox vleft">
       <h2 class="black">
         Embeds in an HTML5 world
@@ -917,7 +917,7 @@ body {
 
 <group id="appcache-group">
   <slide class="segue quote nobackground" style="background-image: url(images/clouds.jpg); background-color: black;">
-    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
+    <aside class="gdbar right bottom"><img class="small-logo" src="images/google_developers_icon_128.png"></aside>
     <article class="flexbox vleft">
       <svg height="400px"  fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 294.1 256.3">
             <path d="M294.1,79.0H246.3C226.7,31.9,180.0,0,128.1,0C57.5,0,0,57.4,0,128.1 C0,198.8,57.5,256.3,128.1,256.3c51.9,0,98.5-31.8,118.2-79.0h47.7V79.0z M256.1,139.2H128.1 c-6.1,0-11.1-4.9-11.1-11.1c0-6.1,4.9-11.1,11.1-11.1h127.9V139.2z M128.1,218.3 c-49.7,0-90.1-40.4-90.1-90.1c0-49.7,40.4-90.1,90.1-90.1c30.8,0,59.1,16.0,75.5,41.0h-75.5 c-27.0,0-49.1,22.0-49.1,49.1c0,27.0,22.0,49.1,49.1,49.1h75.5 C187.3,202.3,159.0,218.3,128.1,218.3z"/>
@@ -1024,7 +1024,7 @@ body {
 
 <group id="end">
   <slide id="thank-you" class="thank-you-slide segue nobackground">
-    <aside class="gdbar right"><img src="images/google_developers_icon_128.png" /></aside>
+    <aside class="gdbar right"><img class="small-logo" src="images/google_developers_icon_128.png" /></aside>
     <article class="flexbox vleft auto-fadein">
       <h2>&lt;Thank You!&gt;</h2>
     </article>

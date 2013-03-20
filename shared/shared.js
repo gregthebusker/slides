@@ -10,12 +10,38 @@ var request = $.ajax({
     var ids = slideHolder.getAttribute('data-shared-slides').split(',');
     ids.forEach(function(id) {
       var slide = els.querySelector('#' + id);
-      slideHolder.appendChild(slide);
+	  if (slide) {
+        slideHolder.appendChild(slide);
+	  }
     });
   }
 
   $('#title-h1').html($('title').html());
-
+  
+  var src;
+  var el = document.querySelector('.small-logo-template');
+  if (el) {
+   src = el.getAttribute('data-src');
+  }
+  if (src) {
+    var logos = document.querySelectorAll('.small-logo');
+	for(i = 0; i < logos.length; i++) {
+	  logos[i].src = src;
+	}
+  }
+  
+  src = undefined;
+  el = document.querySelector('.big-logo-template');
+  if (el) {
+   src = el.getAttribute('data-src');
+  }
+  if (src) {
+    logos = document.querySelectorAll('.big-logo');
+	for(i = 0; i < logos.length; i++) {
+	  logos[i].src = src;
+	}
+  }
+  
   start();
 });
 
