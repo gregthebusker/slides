@@ -345,7 +345,7 @@
 </group>
 
 <group id="mobile-power-group">
- <slide>
+ <slide class="nobackground">
     <hgroup>
       <h2>Power</h2>
     </hgroup>
@@ -366,7 +366,7 @@
 </group>
 
 <group id="mobile-unorganied">
-  <slide>
+  <slide class="nobackground">
     <hgroup>
       <h2>Stick it in the page</h2>
     </hgroup>
@@ -376,7 +376,7 @@
   </slide>
 
 
-  <slide>
+  <slide class="nobackground">
     <hgroup>
       <h2>Let's add a poster attribute and some click handlers</h2>
     </hgroup>
@@ -485,7 +485,7 @@
     </h2>
   </slide>
 
-  <slide>
+  <slide class="nobackground">
     <hgroup>
       <h2>Controls</h2>
     </hgroup>
@@ -537,7 +537,7 @@
   </slide>
 
 
-  <slide>
+  <slide class="nobackground">
     <hgroup>
       <h2>Custom Controls</h2>
     </hgroup>
