@@ -1,5 +1,6 @@
 var request = $.ajax({
-  url: "shared/slides.txt"
+  url: "shared/slides.txt",
+  dataType: "text"
 }).done(function(text) {
   var els = document.createElement('div');
   els.innerHTML = text;
