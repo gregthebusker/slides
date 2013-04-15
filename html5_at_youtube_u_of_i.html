@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML5 at YouTube: Stories from the Front Line</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+    
+  <base target="_blank">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<img class="small-logo-template" data-src="images/HTML5_Badge_64.png"/>
+<img class="big-logo-template" data-src="images/HTML5_Logo_512.png"/>
+
+<slides class="layout-widescreen">
+
+  <slideholder data-shared-slides="logo"></slideholder>
+
+  <slide class="title-slide segue">
+    <aside class="gdbar"><img class="small-logo"/></aside>
+    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 id="title-h1"></h1>
+      <p>Greg Schechter - Web Warrior, Facebook
+      </p>
+      <h1 data-config-title style="display:none"></h1>
+      <h2 data-config-subtitle style="display:none;"></h2>
+      <p data-config-presenter="" style="display:none;"></p>
+    </hgroup>
+  </slide>
+
+  <slideholder data-shared-slides="me"></slideholder>
+
+ <slide class="segue quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
+    <article class="flexbox vleft">
+      <h2 class="black">
+        What's Google IO about?
+      </h2>
+    </article>
+  </slide>
+
+
+  <slide class="fill nobackground" style="background-image: url(images/interns.jpg)">
+  </slide>
+
+
+  <slide class="fill nobackground" style="background-image: url(images/coolcat.jpg)">
+    <hgroup>
+      <h2 class="white">I R one C00LZ Kat</h2>
+    </hgroup>
+    <footer class="source black">http://www.flickr.com/photos/scjn/4564274827/</footer>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Last year's coolness</h2>
+    </hgroup>
+    <article>
+      <iframe data-src="http://www.youtube.com/embed/VUQSoHFMD8c?rel=0"></iframe>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>This year's awesome hardware</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <p>
+        <img src="images/nexus.png">
+      </p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Put them together</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <p>
+        <img src="images/nexuschrome.png">
+      </p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Put them together</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <p>
+        <img src="images/nexusopera.png">
+      </p>
+    </article>
+  </slide>
+
+ <slide class="segue quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
+    <article class="flexbox vleft">
+      <h2 class="black">
+        Is the coolness ready to use?
+      </h2>
+    </article>
+  </slide>
+
+  <slide class="fill nobackground" style="background-image: url(images/helmetcat.jpg)">
+    <hgroup>
+      <h2 class="white">I's ready for battlez</h2>
+    </hgroup>
+    <footer class="source white">http://www.flickr.com/photos/mycoolpics/92033686/</footer>
+  </slide>
+
+  <slideholder data-shared-slides="html5-intro-group"></slideholder>
+
+
+  <slide class="segue quote nobackground">
+    <article class="flexbox vleft">
+      <h2 class="black">
+        Who can use this stuff?
+      </h2>
+    </article>
+  </slide>
+
+  <slide class="segue quote nobackground">
+    <article class="flexbox vleft">
+      <h2 class="black">
+        Depends on your users
+      </h2>
+    </article>
+  </slide>
+
+
+  <style>
+    .care-graph[data-step-on="0"] .browser-circle,
+    .care-graph[data-step-on="1"] .ie {
+      background-color: #444;
+    }
+
+    .care-graph[data-step-on="3"] .ie {
+      background-color: #444;
+      background-image: -webkit-linear-gradient(top, transparent 10%, #36C 10%);
+    }
+
+    .care-graph .text-school,
+    .care-graph .text-job,
+    .care-graph .text-youtube {
+       display: none;
+     }
+    .care-graph[data-step-on="1"] .text-school,
+    .care-graph[data-step-on="2"] .text-job,
+    .care-graph[data-step-on="3"] .text-youtube {
+       display: block;
+    }
+  </style>
+
+  <slide class="nobackground browser-graph care-graph" data-number-of-steps="3" data-step-on="0">
+    <hgroup>
+      <h2 class="black">
+        What users I prioritize development for
+      </h2>
+      <h3 class="text-school black">
+        When I was in school
+      </h3>
+      <h3 class="text-job black">
+        My last job
+      </h3>
+      <h3 class="text-youtube black">
+        YouTube
+      </h3>
+    </hgroup>
+    <article>
+      <div class="graph-centered browser-circles">
+        <div class="browser-circle chrome">Chrome</div>
+        <div class="browser-circle ff">Firefox</div>
+        <div class="browser-circle safari">Safari</div>
+        <div class="browser-circle opera">Opera</div>
+        <div class="browser-circle ie">IE</div>
+      </div>
+    </article>
+  </slide>
+
+
+  <slide class="segue quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
+    <article class="flexbox vleft">
+      <h2 class="black">
+        Why HTML5?
+      </h2>
+    </article>
+  </slide>
+
+
+  <slide class="segue quote nobackground" style="background-image: url(images/clouds.jpg); background-color: black;">
+    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
+    <article class="flexbox vleft">
+      <svg height="400px" fill="#FFF" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220.5 199.5">
+        <path d="M32.8,0L25.4,37.0 176.0,37.0 171.3,60.9 20.6,60.9 13.3,97.9 163.9,97.9 155.5,140.1 94.8,160.2 42.2,140.1 45.8,121.8 8.8,121.8 0,166.2 87.0,199.5 187.3,166.2 200.6,99.4 203.3,86.0 220.4,0z"/>
+      </svg>
+      <h2 class="centered white" style="margin-top: 80px">
+        CSS3 Styling
+      </h2>
+      <footer class="source">http://www.flickr.com/photos/dannykboyd/5048495262/</footer>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Rounded Corners</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="css">
+&lt;style&gt;
+  .somebox {
+    border-radius: 3px;
+  }
+&lt;/style&gt;
+      </pre>
+    </article>
+    <article>
+      <p>With awesomeness</p>
+      <div style="border: 10px solid #444; border-radius: 20px; width: 300px; height: 100px;"></div>
+      <p>Without awesomeness</p>
+      <div style="border: 10px solid #444; width: 300px; height: 100px;"></div>
+    </article>
+  </slide>
+
+  <style>
+    .transitions .a2 {
+      height: 0px;
+      opacity: 0;
+    }
+    .transitions .awesome.a2 {
+      -webkit-transition: height 1s, opacity 1s 1s;
+      -moz-transition: height 1s, opacity 1s 1s;
+      -o-transition: height 1s, opacity 1s 1s;
+      transition: height 1, opacity 1s 1s;
+    }
+    .transitions .a1,
+    .transitions[data-step-on="1"] .a2 {
+      height: 40px;
+      opacity: 1;
+    }
+  </style>
+
+  <slide class="transitions" data-number-of-steps="1">
+    <hgroup>
+      <h2>Transitions</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="css">
+&lt;style&gt;
+  .somebox {
+    -webkit-transition: height 1s, opacity 1s 1s;
+    -moz-transition: height 1s, opacity 1s 1s;
+    -ms-transition: height 1s, opacity 1s 1s;
+    -o-transition: height 1s, opacity 1s 1s;
+    transition: height 1, opacity 1s 1s;
+  }
+&lt;/style&gt;
+      </pre>
+    </article>
+    <article style="display: inline-block; height: 100px;">
+      <p>With Awesomeness</p>
+      <div style="border: 3px solid #444; border-radius: 3px; padding: 5px;">
+        <div class="a1">Awesome Information</div>
+        <div class="a2 awesome">New Awesome Information</div>
+      </div>
+    </article>
+    <article style="display: inline-block; height: 100px;">
+      <p>Without Awesomeness</p>
+      <div style="border: 3px solid #444; border-radius: 3px; padding: 5px;">
+        <div class="a1">Awesome Information</div>
+        <div class="a2">New Awesome Information</div>
+      </div>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>What CSS3 gets us</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Enhance the user experience</li>
+        <li>Less code</li>
+        <li>Faster preformance</li>
+        <li>Less wasted development time and less hacks</li>
+        <li>The experience without it is still good</li>
+      </ul>
+    </article>
+  </slide>
+
+
+  <slide class="segue quote nobackground">
+    <article class="flexbox vleft">
+      <h2 class="black">
+        Why HTML5?
+      </h2>
+    </article>
+  </slide>
+
+  <slide class="segue quote nobackground">
+    <article class="flexbox vleft">
+      <h2 class="black">
+        When HTML5?
+      </h2>
+    </article>
+  </slide>
+
+
+  <style>
+    .css3-graph[data-step-on="0"] .browser-circle,
+    .css3-graph[data-step-on="2"] .ie {
+      background-color: #444;
+    }
+
+    .css3-graph[data-step-on="1"] .ie {
+      background-color: #36c;
+      background-image: -webkit-linear-gradient(top, #444 50%, transparent 50%);
+    }
+    .css3-graph[data-step-on="2"] .ie {
+      background-image: -webkit-linear-gradient(top, #444 50%, transparent 50%);
+    }
+
+    .css3-graph h3.text-round, 
+    .css3-graph h3.text-trans {
+       display: none;
+     }
+    .css3-graph[data-step-on="1"] h3.text-round,
+    .css3-graph[data-step-on="2"] h3.text-trans {
+       display: block;
+    }
+    .css3-graph[data-step-on="1"] div.text-round,
+    .css3-graph[data-step-on="2"] div.text-trans {
+       opacity: 1;
+    }
+  </style>
+
+  <slide class="nobackground css3-graph browser-graph" data-number-of-steps="2" data-step-on="0">
+    <hgroup>
+      <h2 class="black">
+        Who can use the css3 coolness.
+      </h2>
+      <h3 class="text-round black">
+        Rounded Corners
+      </h3>
+      <h3 class="text-trans black">
+        Transitions
+      </h3>
+    </hgroup>
+    <article>
+      <div class="graph-centered browser-circles">
+        <div class="browser-circle chrome">Chrome</div>
+        <div class="browser-circle ff">Firefox</div>
+        <div class="browser-circle safari">Safari</div>
+        <div class="browser-circle opera">Opera</div>
+        <div class="browser-circle ie">IE</div>
+        <div class="text-round vert-centered circle-text">~85%</div>
+        <div class="text-trans vert-centered circle-text">~70%</div>
+      </div>
+    </article>
+  </slide>
+
+
+  <slide class="segue quote nobackground" style="background-image: url(images/clouds.jpg); background-color: black;">
+    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
+    <article class="flexbox vleft">
+      <svg height="400px"  fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 278.28 278.31">
+        <path d="M272.4,114.38L232.28,97.74l16.52-39.89c-4.22-5.90-8.78-11.48-13.80-16.56c-0.30-0.32-0.60-0.65-0.92-0.97  c-0.51-0.51-1.07-1-1.63-1.52c-4.91-4.82-10.31-9.19-16.00-13.29L176.56,42.01L159.93,1.90  c-14.45-2.44-29.03-2.50-43.14-0.35c-0.26,0.03-0.48,0.05-0.69,0.07c-0.61,0.09-1.20,0.22-1.75,0.35  L97.72,41.99L57.60,25.39c-11.98,8.55-22.39,18.83-30.89,30.44c-0.08,0.12-0.18,0.24-0.27,0.37  c-0.35,0.48-0.69,0.98-1.02,1.49l16.57,40.00L1.88,114.34c-2.40,14.45-2.48,28.99-0.35,43.09  c0.03,0.25,0.05,0.52,0.10,0.76c0.07,0.59,0.19,1.16,0.30,1.74l40.06,16.58l-16.57,39.99  c3.81,5.34,7.92,10.46,12.39,15.15c0.79,0.83,1.54,1.70,2.37,2.52c0.57,0.59,1.22,1.13,1.83,1.70  c4.82,4.69,10.13,8.94,15.7,12.93l39.97-16.56l16.58,40.05c0.59,0.12,1.22,0.23,1.82,0.37  c0.14-0.02,0.32,0.01,0.47,0.03c14.17,2.18,28.78,2.11,43.33-0.31l16.62-40.12l40.02,16.58  c0.52-0.31,1.03-0.66,1.52-1.03c0.15-0.09,0.30-0.22,0.47-0.35c11.51-8.46,21.78-18.82,30.32-30.77l-16.62-40.14  l40.06-16.58c0.10-0.57,0.23-1.18,0.34-1.80c0.02-0.18,0.02-0.37,0.05-0.55  C274.88,143.47,274.82,128.89,272.4,114.38z M239.98,144.63l-42.22,17.49l0.06,0.16l-0.14,0.05l17.50,42.20  c-3.26,3.80-6.81,7.32-10.63,10.63l-42.22-17.47l-0.05,0.14l-0.14-0.07l-17.48,42.2  c-4.99,0.37-9.97,0.35-15.02,0.02l-17.50-42.22l-0.12,0.05l-0.07-0.16l-42.35,17.55  c-0.44-0.37-0.93-0.70-1.37-1.11c-1.40-1.24-2.72-2.65-4.05-4.00c-1.33-1.33-2.72-2.61-3.99-4.02  c-0.37-0.40-0.71-0.92-1.09-1.37l17.52-42.35l-0.14-0.07l0.07-0.13l-42.23-17.49  c-0.33-5.04-0.36-10.05,0.03-15.02l42.18-17.47l-0.04-0.13l0.12-0.05L59.09,69.73  c3.31-3.81,6.84-7.37,10.62-10.62l42.22,17.47l0.05-0.12l0.12,0.05l17.50-42.22c5.04-0.35,10.04-0.35,15.03,0.02  l17.47,42.22l0.18,0.07l42.22-17.49c1.83,1.61,3.59,3.33,5.36,5.06c1.78,1.81,3.56,3.63,5.22,5.56l-17.47,42.20  l0.14,0.05l-0.06,0.16l42.21,17.47C240.34,134.60,240.35,139.61,239.98,144.63z M172.59,122.50l-0.06-0.12  l10.23-24.62c-1.87-2.21-3.97-4.26-6.19-6.23l-24.66,10.20l-0.03-0.06l-0.08,0.02l-10.20-24.64  c-2.91-0.23-5.83-0.23-8.77,0l-10.21,24.63l-0.07,0.00l-0.04,0.03l-24.65-10.17c-2.20,1.87-4.25,3.94-6.23,6.15  l10.23,24.67l-0.08,0.03l0.03,0.09l-24.73,10.26c-0.03,0.31-0.08,0.68-0.10,1.00  c-0.05,1.09-0.01,2.21-0.02,3.31c0,1.09-0.04,2.22,0.05,3.32c0,0.34,0.02,0.68,0.08,1.03l24.73,10.24l-0.00,0.11  l0.05,0.03l-10.19,24.65c1.88,2.20,3.98,4.25,6.21,6.15l24.63-10.20l0.02,0.10l0.09-0.03l10.21,24.65  c2.96,0.23,5.88,0.23,8.78,0l10.20-24.65l0.08,0.03l0.05-0.09l24.63,10.18c2.22-1.90,4.27-3.97,6.19-6.17  l-10.20-24.63l0.07-0.05l-0.03-0.09l24.63-10.20c0.10-1.48,0.12-3.00,0.14-4.45c0-1.44-0.02-2.89-0.12-4.30  L172.59,122.50z M137.15,153.76c-9.18,0-16.63-7.44-16.63-16.63c0-9.18,7.44-16.63,16.63-16.63s16.63,7.44,16.63,16.63  C153.78,146.31,146.33,153.76,137.15,153.76z"/>
+            </svg>
+      <h2 class="centered white" style="margin-top: 10px">
+        Performance &<br>Integration
+      </h2>
+      <footer class="source">http://www.flickr.com/photos/dannykboyd/5048495262/</footer>
+    </article>
+  </slide>
+
+
+  <slide class="segue quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
+    <article class="flexbox vleft">
+      <h2 class="black">
+        Let's talk Uploads
+      </h2>
+    </article>
+  </slide>
+
+  <slide class="fill nobackground" style="background-image: url(images/youtubeupload.png)">
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>XHR Uploads</h2>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="javascript">
+&lt;script&gt;
+  function upload(blobOrFile) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', '/server', true);
+    xhr.onload = function(e) { ... };
+
+    // Listen to the upload progress.
+    var progressBar = document.querySelector('progress');
+    xhr.upload.onprogress = function(e) {
+      if (e.lengthComputable) {
+        progressBar.value = (e.loaded / e.total) * 100;
+        progressBar.textContent = progressBar.value; // Fallback for unsupported browsers.
+      }
+    };
+
+    xhr.send(blobOrFile);
+  }
+
+&lt;/script&gt;
+      </pre>
+    </article>
+  </slide>
+
+
+ <style>
+   .xhr-demo .progress-bar {
+     background-color: white;
+     border: 1px solid #CCCCCC;
+     display: inline-block;
+     height: 15px;
+     padding: 1px;
+     vertical-align: middle;
+     width: 400px;
+   }
+   .xhr-demo .progress-bar-fill {
+      background-color: #6483DC;
+      background-repeat: repeat-x;
+      display: block;
+      height: 15px;
+      width: 0%;
+    }
+
+    .xhr-demo[data-step-on="1"] .progress-bar-fill {
+      -webkit-transition: width 0s 4s;
+    }
+    .xhr-demo[data-step-on="1"] .bar2 .progress-bar-fill {
+      -webkit-transition: width 4s;
+    }
+
+    .xhr-demo[data-step-on="1"] .progress-bar-fill {
+      width: 100%;
+    }
+ </style>
+
+  <slide class="xhr-demo" data-number-of-steps="1">
+    <hgroup>
+      <h2>XHR Uploads</h2>
+    </hgroup>
+    <article>
+        <h3 style="font-size: 150%">Oldness</h3>
+	<span>Upload progress</span>
+        <div class="progress-bar"><span class="progress-bar-fill"></span></div>
+
+        <h3 style="font-size: 150%; margin-top: 100px">Newness</h3>
+	<span>Upload progress</span>
+        <div class="progress-bar bar2"><span class="progress-bar-fill"></span></div>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Why is XHR Uploads an improvement</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Richer user experience with progress updates</li>
+        <li>Multiple file uploads</li>
+        <li>Resumable uploads</li>
+        <li>No plugin required for advanced features</li>
+      </ul>
+    </article>
+  </slide>
+
+  <style>
+    .xhr-graph[data-step-on="0"] .browser-circle,
+    .xhr-graph[data-step-on="1"] .ie {
+      background-color: #444;
+    }
+
+    .xhr-graph[data-step-on="1"] .text-percent {
+      opacity: 1;
+    }
+  </style>
+
+  <slide class="nobackground browser-graph xhr-graph" data-number-of-steps="1" data-step-on="0">
+    <hgroup>
+      <h2 class="black">
+        Who can use the XHR upload coolness.
+      </h2>
+    </hgroup>
+    <article>
+      <div class="graph-centered browser-circles">
+        <div class="browser-circle chrome">Chrome</div>
+        <div class="browser-circle ff">Firefox</div>
+        <div class="browser-circle safari">Safari</div>
+        <div class="browser-circle opera">Opera</div>
+        <div class="browser-circle ie">IE</div>
+        <div class="text-percent vert-centered circle-text">~75%</div>
+      </div>
+    </article>
+  </slide>
+
+
+
+
+  <slide class="fill nobackground" style="background-image: url(images/cooldog.jpg); background-position: center;">
+    <hgroup>
+      <h2 class="white">Time to up the coolness</h2>
+    </hgroup>
+    <footer class="source">http://www.flickr.com/photos/tjc/4320473610/</footer>
+  </slide>
+
+  
+  
+  <slideholder data-shared-slides="multimedia-title"></slideholder>
+
+  <slideholder data-shared-slides="mobile-intro-group"></slideholder>
+
+  <slideholder data-shared-slides="mobile-source-group"></slideholder>
+
+  <slideholder data-shared-slides="mobile-power-group"></slideholder>
+  
+  <slideholder data-shared-slides="mobile-unorganied"></slideholder>
+  
+  <slideholder data-shared-slides="appcache-group"></slideholder>
+
+
+
+
+
+
+  <slide class="segue quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
+    <article class="flexbox vleft">
+      <h2 class="black">
+        So is the coolness ready?
+      </h2>
+    </article>
+  </slide>
+
+
+  <slide class="segue quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
+    <article class="flexbox vleft">
+      <h2 class="black">
+        Yes
+      </h2>
+      <h3 class="black">And not only do your users want it, they need it</h3>
+    </article>
+  </slide>
+
+
+  <slideholder data-shared-slides="end"></slideholder>
+
+  <slide class="backdrop"></slide> 
+
+</slides>
+</body>
+</html>
