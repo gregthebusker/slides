@@ -12,7 +12,7 @@
     <aside class="gdbar"><img class="small-logo"></aside>
     <hgroup class="auto-fadein">
       <h1 id="title-h1"></h1>
-      <p>Greg Schechter - Web Warrior, YouTube
+      <p>Greg Schechter - Web Warrior, Facebook
       </p>
       <h1 data-config-title style="display:none"></h1>
       <h2 data-config-subtitle style="display:none;"></h2>
