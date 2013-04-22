@@ -38,7 +38,7 @@
     <footer class="source black">http://www.w3.org/html/logo/</footer>
   </slide>
 
-  <slide class="html5-features" data-number-of-steps="3">
+  <slide id="html5-features" class="html5-features" data-number-of-steps="3">
     <hgroup class="flexbox vcenter">
       <ul>
         <li>
@@ -142,7 +142,7 @@
     </article>
   </slide>
 
-  <slide class="browser-graph video-graph" data-number-of-steps="1" data-step-on="0">
+  <slide id="html5-video-capable-browser" class="browser-graph video-graph" data-number-of-steps="1" data-step-on="0">
     <hgroup>
       <h2 class="black">
         HTML5 Video Capable Browsers
@@ -155,7 +155,7 @@
         <div class="browser-circle safari">Safari</div>
         <div class="browser-circle opera">Opera</div>
         <div class="browser-circle ie">IE</div>
-        <div class="text-percent vert-centered circle-text">~80%</div>
+        <div class="text-percent vert-centered circle-text">~85%</div>
       </div>
     </article>
   </slide>

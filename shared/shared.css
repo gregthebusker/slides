@@ -157,7 +157,9 @@ slides slide.title-slide::after {
 
     .video-graph[data-step-on="1"] .ie {
       background-color: #36c;
-      background-image: -webkit-linear-gradient(top, #444 50%, transparent 50%);
+      background-image: -webkit-linear-gradient(top, #444 20%, transparent 20%);
+      background-image: -moz-linear-gradient(top, #444 20%, transparent 20%);
+      background-image: linear-gradient(top, #444 20%, transparent 20%);
     }
 
     .video-graph[data-step-on="1"] .text-percent {
