@@ -19,7 +19,7 @@ var request = $.ajax({
 
   $('#title-h1').html($('title').html());
   
-  var src = "images/HTML5_Logo_512.png";
+  var src = "images/HTML5_Badge_64.png";
   var el = document.querySelector('.small-logo-template');
   if (el) {
    src = el.getAttribute('data-src');
@@ -31,7 +31,7 @@ var request = $.ajax({
 	}
   }
   
-  src = "images/HTML5_Badge_64.png";
+  src = "images/HTML5_Logo_512.png";
   el = document.querySelector('.big-logo-template');
   if (el) {
    src = el.getAttribute('data-src');
