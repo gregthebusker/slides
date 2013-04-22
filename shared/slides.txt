@@ -6,6 +6,22 @@
   </slide>
 </group>
 
+<group id="group-start">
+  <slideholder data-shared-slides="logo"></slideholder>
+  <slide id="title-slide" class="title-slide segue nobackground">
+    <aside class="gdbar"><img class="small-logo"></aside>
+    <hgroup class="auto-fadein">
+      <h1 id="title-h1"></h1>
+      <p>Greg Schechter - Web Warrior, YouTube
+      </p>
+      <h1 data-config-title style="display:none"></h1>
+      <h2 data-config-subtitle style="display:none;"></h2>
+      <p data-config-presenter="" style="display:none;"></p>
+    </hgroup>
+  </slide>
+  <slideholder data-shared-slides="me"></slideholder>
+</group>
+
 <group id="group-me">
   <slide id="me" class="fill">
     <div style="text-align: center; display: inline-block; width: 99%;">

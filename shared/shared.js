@@ -4,18 +4,22 @@ var request = $.ajax({
 }).done(function(text) {
   var els = document.createElement('div');
   els.innerHTML = text;
-
-  var shared = document.querySelectorAll('slideholder[data-shared-slides]');
-  for(var i = 0; i < shared.length; i++) {
-    var slideHolder = shared[i];
-    var ids = slideHolder.getAttribute('data-shared-slides').split(',');
-    ids.forEach(function(id) {
-      var slide = els.querySelector('#' + id);
-	  if (slide) {
-        slideHolder.appendChild(slide);
-	  }
-    });
-  }
+  
+  var sub = function(doc) {
+    var shared = doc.querySelectorAll('slideholder[data-shared-slides]');
+    for(var i = 0; i < shared.length; i++) {
+      var slideHolder = shared[i];
+      var ids = slideHolder.getAttribute('data-shared-slides').split(',');
+      ids.forEach(function(id) {
+        var slide = els.querySelector('#' + id);
+        if (slide) {
+          sub(slide);
+          slideHolder.appendChild(slide);
+        }
+      });
+    }
+  };
+  sub(document);
 
   $('#title-h1').html($('title').html());
   
@@ -45,7 +49,6 @@ var request = $.ajax({
   
   start();
 });
-
 
 function start() {
   Modernizr.load({
