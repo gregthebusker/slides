@@ -547,7 +547,7 @@ SlideDeck.prototype.updateSlides_ = function(opt_dontPush) {
 // this.enableSlideFrames_(curSlide + 2); // Next slide.
 
    // Enable current slide's iframes (needed for page loat at current slide).
-   this.enableSlideFrames_(curSlide + 1);
+   this.enableSlideFrames_(curSlide);
 
    // No way to tell when all slide transitions + auto builds are done.
    // Give ourselves a good buffer to preload the next slide's iframes.
