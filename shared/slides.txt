@@ -366,7 +366,7 @@
       <h2>Power</h2>
     </hgroup>
     <article>
-      <iframe data-src="http://www.youtube.com/embed/f5Fg6KFcOsU?rel=0"></iframe>
+      <iframe data-src="http://www.youtube.com/embed/f5Fg6KFcOsU?rel=0&autoplay=1"></iframe>
     </article>
   </slide>
 
