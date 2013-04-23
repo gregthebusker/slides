@@ -455,7 +455,8 @@ SlideDeck.prototype.prevSlide = function(opt_dontPush) {
  * @param {boolean=} opt_dontPush
  */
 SlideDeck.prototype.nextSlide = function(opt_dontPush) {
-  if (!document.body.classList.contains('overview') && (this.buildNextItem_() || this.nextStep_())) {
+  if (!document.body.classList.contains('overview') && (this.playVideo_() ||
+      this.buildNextItem_() || this.nextStep_())) {
     return;
   }
 
@@ -547,7 +548,7 @@ SlideDeck.prototype.updateSlides_ = function(opt_dontPush) {
 // this.enableSlideFrames_(curSlide + 2); // Next slide.
 
    // Enable current slide's iframes (needed for page loat at current slide).
-   this.enableSlideFrames_(curSlide);
+   this.enableSlideFrames_(curSlide + 1);
 
    // No way to tell when all slide transitions + auto builds are done.
    // Give ourselves a good buffer to preload the next slide's iframes.
@@ -758,5 +759,19 @@ SlideDeck.prototype.nextStep_ = function() {
     }
   }
 
+  return false;
+};
+
+SlideDeck.prototype.playVideo_ = function() {
+  var slide = this.slides[this.curSlide_];
+  var iframes = slide.getElementsByTagName('iframe');
+  if (iframes.lenght) {
+    var iframe = iframes[0];
+    if(iframe.getAttribute('autoplay')) {
+      iframe.src = iframe.src + '&autoplay=1';
+      return true;
+    }
+  }
+  
   return false;
 };
