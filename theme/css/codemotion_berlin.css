@@ -1,0 +1,32 @@
+aside.gdbar img {
+    height: auto;
+    top: 28px;
+    width: 190px;
+}
+
+
+slides slide:not(.nobackground):before {
+  content: "#mov06 http://creativecommons.org/licenses/by-nc-sa/3.0/";
+  background: url(../../images/codemotion_rome/logo_square.png) no-repeat 0 50%;
+  -webkit-background-size: 30px 30px;
+  -moz-background-size: 30px 30px;
+  -o-background-size: 30px 30px;
+  background-size: 30px 30px;
+}
+
+.logoslide img {
+  height: auto;
+}
+
+aside.gdbar {
+  background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #868686), color-stop(100%, #868686)) no-repeat;
+  background: -webkit-linear-gradient(left, #868686, #868686) no-repeat;
+  background: -moz-linear-gradient(left, #868686, #868686) no-repeat;
+  background: -o-linear-gradient(left, #868686, #868686) no-repeat;
+  background: -ms-linear-gradient(left, #868686, #868686) no-repeat;
+  background: linear-gradient(left, #868686, #868686) no-repeat;
+  -webkit-background-size: 0% 100%;
+  -moz-background-size: 0% 100%;
+  -o-background-size: 0% 100%;
+  background-size: 0% 100%;
+}

@@ -1062,3 +1062,720 @@ body {
     </article>
   </slide>
 </group>
+
+<group id="faster-cats-all">
+  <slide class="fill nobackground" style="background-image: url(images/html5.png)">
+    <footer class="source black">http://www.w3.org/html/logo/</footer>
+  </slide>
+
+  <slide class="segue quote nobackground">
+    <article class="flexbox vleft">
+      <h2 class="black">
+        HTML + JS + CSS + Awesomeness
+      </h2>
+    </article>
+  </slide>
+  
+  <slideholder data-shared-slides="html5-features"></slideholder>
+
+  <slide class="segue quote nobackground">
+    <article class="flexbox vleft">
+      <h2 class="black">
+        Translation
+      </h2>
+    </article>
+  </slide>
+
+
+  <slide class="segue quote nobackground">
+    <article class="flexbox vleft">
+      <h2 class="black" style="line-height: 400px">
+        HTML5 -> <img style="vertical-align: middle; height: 400px;" src="images/rainbow.jpg">
+      </h2>
+    </article>
+    <footer class="source">http://www.flickr.com/photos/geishaboy500/3183872667/</footer>
+  </slide>
+
+
+  <slide class="fill nobackground">
+    <article class="flexbox vcenter">
+      <img src="images/flash.png">
+    </article>
+  </slide>
+
+  <slide class="segue quote nobackground">
+    <article class="flexbox vleft">
+      <h2 class="black">
+        Why HTML5?
+      </h2>
+    </article>
+  </slide>
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>HTML5 vs Flash</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Features</li>
+        <li>Accessibility</li>
+        <li>"Device-ability"</li>
+        <li>Security</li>
+        <li>Embeds</li>
+        <li>API</li>
+      </ul>
+    </article>
+  </slide>
+
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>Round 1: Features</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/features.jpg" style="height: 470px;">
+    </article>
+    <footer class="source">http://www.flickr.com/photos/zipckr/4624150058/</footer>
+  </slide>
+
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>Why Flash?</h2>
+      <h3>Features missing in HTML5</h3>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Content protection<ul><li>RTMPE protocol / Flash Access</li></ul></li>
+        <li>Camera & Microphone Access</li>
+        <li>Adaptive & Live Streaming</li>
+        <li>Fullscreen video
+          <ul>
+            <li>HD, hardware accelerated cat videos!</li>
+            <li>**API available in webkit, gecko, and presto</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+ <slide class="fill nobackground">
+    <hgroup>
+      <h2>Fullscreen API</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="javascript">
+&lt;script&gt;
+  var elem = document.getElementById("my-element");
+  document.onfullscreenchange = function() {
+    // The fullscreen element:
+    // document.webkitFullScreenElement;
+    console.log ("We went fullscreen!");
+  };
+  elem.requestFullScreen();
+&lt;/script&gt;
+</pre>
+    </article>
+  </slide>
+  
+  <slide class="nobackground">
+    <hgroup>
+      <h2>Fullscreen</h2>
+    </hgroup>
+    <article>
+      <iframe data-src="http://www.youtube.com/embed/5_sfnQDr1-o?html5=1" frameborder="0" allowfullscreen></iframe>
+    </article>
+  </slide>
+  
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>Why Flash?</h2>
+      <h3>Features missing in HTML5</h3>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Content protection<ul><li>RTMPE protocol / Flash Access</li></ul></li>
+        <li>Camera & Microphone Access</li>
+        <li>Adaptive & Live Streaming</li>
+        <li>Fullscreen video
+          <ul>
+            <li>HD, hardware accelerated cat videos!</li>
+            <li>**API available in webkit and gecko </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="build">
+        <li>Consistent format support<ul><li>HTML5 needs to support both H.264 and WebM</li></ul></li>
+        <li>Cross platform consistency****</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>Why HTML5?</h2>
+      <h3>&lt;video&gt; Expectations</h3>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Open source technology<ul><li>Browser / Player / Codec</li></ul></li>
+        <li>Lower latency<ul><li>No plug-in instantiation</li></ul></li>
+        <li>Better performance and fidelity<ul><li>Power consumption</li></ul></li>
+      </ul>
+    </article>
+  </slide>
+  
+  <slideholder data-shared-slides="mobile-power-group"></slideholder>
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>Why HTML5?</h2>
+      <h3>&lt;video&gt; Expectations</h3>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Open source technology<ul><li>Browser / Player / Codec</li></ul></li>
+        <li>Lower latency<ul><li>No plug-in instantiation</li></ul></li>
+        <li>Better performance and fidelity<ul><li>Power consumption</li></ul></li>
+      </ul>
+      <ul class="build">
+        <li>Accessibility<ul><li>User agents can have special video handling</li></ul></li>
+      </ul>
+    </article>
+  </slide>
+  
+  <slide class="segue quote nobackground">
+    <article class="flexbox vleft">
+      <h3 class="black">
+        <a href="https://www.youtube.com/watch?v=QRS8MkLhQmM&html5=1">HTML5 Example</a>
+      </h3>
+      <h3 class="black">
+        <a href="https://www.youtube.com/watch?v=QRS8MkLhQmM&nohtml5=1">Flash Example</a>
+      </h3>
+    </article>
+  </slide>
+  
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>Accessibility</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/captioncats.png">
+    </article>
+    <footer class="source">http://imgs.xkcd.com/comics/in_ur_reality.png</footer>
+  </slide>
+
+  <slide class="segue quote nobackground">
+    <article class="flexbox vleft">
+      <h2 class="black">
+        Please put on your 3D Glasses
+      </h2>
+    </article>
+  </slide>
+
+  <slide class="fill nobackground">
+    <article class="flexbox vcenter">
+      <img src="images/3dcats.jpg" style="height:560px;">
+    </article>
+    <footer class="source">http://www.flickr.com/photos/jmettraux/4959258811/</footer>
+  </slide>
+
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>Why HTML5?</h2>
+      <h3>3D</h3>
+    </hgroup>
+    <article>
+      <img src="images/3d.png" style="position:absolute; right: 25px;">
+      <ul style="width: 675px;">
+        <li>Flash
+	  <ul>
+	    <li>Build for graphics</li>
+	    <li>Tools for easy video manipulation
+              <ul><li>HTML5 would require WebGL or Canvas</li></ul>
+            </li>
+	  </ul>
+	</li>
+        <li>HTML5
+	  <ul>
+	    <li>Easy integration with browser and devices</li>
+	    <li>Open Standard</li>
+	    <li>Allows for innovations by the browser vendors as well as YouTube</li>
+	  </ul>
+	</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>Round 2: Device-ability</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/fight.jpg" style="height: 470px;">
+    </article>
+    <footer class="source">http://www.flickr.com/photos/dakiny/4430765149/</footer>
+  </slide>
+
+
+  <slideholder data-shared-slides="html5-video-capable-browser"></slideholder>
+
+
+  <slide class="browser-dist nobackground">
+    <hgroup>
+      <h2>Flash Support vs. HTML5 Support</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img class="graph" src="images/html5vsflash1.png">
+    </article>
+  </slide>
+
+  <slide class="browser-dist nobackground">
+    <hgroup>
+      <h2>YouTube Data API Usage for Flash vs. HTML5 Devices</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img class="graph" src="images/html5vsflash2.png">
+    </article>
+  </slide>
+
+  <slide class="segue quote nobackground">
+    <article class="flexbox vleft">
+      <h2 class="black">
+        Why HTML5?
+      </h2>
+    </article>
+  </slide>
+
+  <slide class="segue quote nobackground">
+    <article class="flexbox vleft">
+      <h2 class="black">
+        When HTML5?
+      </h2>
+    </article>
+  </slide>
+
+  <slide class="segue quote nobackground">
+    <article class="flexbox vleft">
+      <h2 class="black" style="line-height: 1em;">
+        Primary Goal: Recover playbacks that would be lost without flash
+      </h2>
+    </article>
+  </slide>
+
+  <slide class="segue quote nobackground">
+    <article class="flexbox vleft">
+      <h2 class="black">
+        Our Solution
+      </h2>
+    </article>
+  </slide>
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>Embeds</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="html">
+&lt;iframe type="text/html"&gt;
+  width="640"
+  height="385"
+  frameborder="0"
+  src="http://www.youtube.com/embed/VIDEO_ID"
+  <b>allowfullscreen</b>&gt;
+&lt;/iframe&gt;
+      </pre>
+      <ul class="build">
+        <li>Plan for the future (if you can)</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>When HTML5?</h2>
+      <h3>&lt;iframe&gt; Embed</h3>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Give the user HTML5 or Flash based on device and user preferences.</li>
+        <li>Allows for better mobile support.</li>
+        <li>Offers an "it just works" experience.</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>Why an iframe?</h2>
+      <h3>Other embedding methods</h3>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>
+          &lt;script&gt;
+	  <ul>
+	    <li>We need our content to be sandboxed</li>
+	    <li>More than just a video tag</li>
+	  </ul>
+	</li>
+        <li>
+          &lt;object&gt;
+	  <ul>
+	    <li>Can load content with the data attribute</li>
+	    <li>But no way to interact with it via JavaScript</li>
+	  </ul>
+	</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>When does the user get HTML5?</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img style="height: 500px" src="images/flow1.png">
+    </article>
+  </slide>
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>Detecting HTML5</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="javascript">
+&lt;script&gt;
+  var videoElement = document.createElement('video');
+  if (videoElement && videoElement.canPlayType &&
+     (videoElement.canPlayType('video/mp4; codecs="avc1.42001E, mp4a.40.2"') || 
+      videoElement.canPlayType('video/webm; codecs="vp8.0, vorbis"'))) {
+    // Sweet, we can use HTML5!
+  }
+&lt;/script&gt;
+      </pre>
+    </article>
+  </slide>
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>When does the user get HTML5?</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img style="height: 500px" src="images/flow1.png">
+    </article>
+  </slide>
+
+  <slide class="fill nobackground" style="background-image: url(images/helmetcat.jpg)">
+    <hgroup>
+      <h2 class="white">Round 3: Performance</h2>
+    </hgroup>
+    <footer class="source white">http://www.flickr.com/photos/mycoolpics/92033686/</footer>
+  </slide>
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>Player Start Time</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img style="height: 300px" src="images/perf1.png">
+      <div style="position:absolute; left: 100px; top: 280px;">
+        HTML5
+      </div>
+      <div style="position:absolute; left: 100px; top: 205px;">
+        Flash
+      </div>
+      <div style="position:absolute; left: 575px; top: 255px;">
+        500ms
+      </div>
+      <p>(Up from 200ms in Jan 2011)</p>
+    </article>
+  </slide>
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>Get Video Time</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>
+          HTML5
+	  <ul>
+	    <li>Opera is Awesome
+              <ul>
+                <li>200ms ahead of the pack</li>
+              </ul>
+            </li>
+	  </ul>
+	</li>
+        <li>
+          Flash
+	  <ul>
+	    <li>IE9 and Opera are the leaders
+              <ul>
+                <li>300ms faster</li>
+              </ul>
+            </li>
+	  </ul>
+	</li>
+        <li>
+          HTML5 is almost always faster than Flash
+	  <ul>
+	    <li>300ms - 400ms faster</li>
+	    <li>IE9 is an exception
+              <ul>
+                <li>IE9 Flash is slightly faster than IE9 HTML5</li>
+              </ul>
+            </li>
+	  </ul>
+	</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>Video Start Time</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img style="height: 300px" src="images/perf2.png">
+      <div style="position:absolute; left: 100px; top: 280px;">
+        Flash
+      </div>
+      <div style="position:absolute; left: 100px; top: 205px;">
+        HTML5
+      </div>
+      <div style="position:absolute; left: 575px; top: 255px;">
+        2.5s
+      </div>
+      <ul class="build"><li>Firefox closest to catching Flash
+        <ul><li>HTML5 ~1.0s slower than Flash</li></ul>
+      </li></ul>
+    </article>
+  </slide>
+
+  <slide class="segue quote nobackground">
+    <article class="flexbox vleft">
+      <h2 class="black">
+        So why is Flash so fast?
+      </h2>
+    </article>
+  </slide>
+
+  <slide class="segue quote nobackground">
+    <article class="flexbox vleft">
+      <h2 class="black">
+        Make Assumptions
+      </h2>
+    </article>
+  </slide>
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>Making Assumptions</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Most users have a recent version of flash</li>
+        <li>Thus we can optimistically embed the most common case and do version checking and updating after a script loads</li>
+        <li>250ms improvement to flash start time</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="segue quote nobackground">
+    <article class="flexbox vleft">
+      <h2 class="black">
+        Preload Video Connection
+      </h2>
+    </article>
+  </slide>
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>Preload Video Connection</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Resolves DNS while page is rendering</li>
+        <li>Maintains an open connection</li>
+        <li>200ms improvement</li>
+      </ul>
+    </article>
+    <article>
+      <pre class="prettyprint" data-lang="html">
+&lt;head&gt;
+  &lt;script&gt;
+    var img = new Image();
+    img.src = videoConnectionUrl;
+  &lt;/script&gt;
+&lt;/head&gt;
+      </pre>
+    </article>
+  </slide>
+
+  <slide class="segue quote nobackground">
+    <article class="flexbox vleft">
+      <h2 class="black">
+        What about embeds?
+      </h2>
+    </article>
+  </slide>
+
+  <slide class="segue quote nobackground">
+    <article class="flexbox vleft">
+      <h2 class="black">
+        #1 cache
+      </h2>
+    </article>
+  </slide>
+
+  <style>
+    .load-slide ul > li::before {
+      content: '';
+    }
+  </style>
+
+  <slide class="fill nobackground load-slide">
+    <hgroup>
+      <h2>Loading a player</h2>
+    </hgroup>
+    <article>
+      <ul class="build" style="color: black;">
+        <li>
+          <ul>
+		<li>1. youtube.com/v/di5I49yg7bY <span style="color: grey">302 redirect</span></li>
+		<li>2. s.ytimg.com/swf/l.swf?args&swf=swf2-hash_url.swf</li>
+		<li>3. s.ytimg.com/swf/swf2-hash_url.swf <span style="color: grey">~150kb</span></li>
+          </ul>
+        </li>
+        <li>
+          <p>Better</p>
+          <ul>
+		<li>1. youtube.com/v/di5I49yg7bY <span style="color: grey">application/x-shockwave-flash</span></li>
+		<li>2. s.ytimg.com/swf/swf2-hash_url.swf</li>
+          </ul>
+        </li>
+        <li>
+          <p>Best</p>
+          <ul>
+		<li>1. youtube.com/embed/di5I49yg7bY <span style="color: grey">text/html</span></li>
+		<li>2. s.ytimg.com/swf/swf2-hash_url.swf</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="segue quote nobackground">
+    <article class="flexbox vleft">
+      <h2 class="black">
+        #2 lazy load
+      </h2>
+    </article>
+  </slide>
+
+  <slide class="segue quote nobackground">
+    <article class="flexbox vleft">
+      <h2 class="black">
+        Most embeds are never played.
+      </h2>
+    </article>
+  </slide>
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>Preload Video Connection</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Delay expensive queries</li>
+        <li>Use cache for most videos</li>
+        <li>Delay loading... flash?</li>
+      </ul>
+    </article>
+    <article>
+      <img src="images/lazy.png" style="width: 48%;">
+      <img src="images/lazy.png" style="width: 48%;">
+    </article>
+  </slide>
+  
+  <slide class="nobackground">
+    <hgroup>
+      <h2><a href="http://gregthebusker.com/iframedemo.html">Demo</a></h2>
+    </hgroup>
+    <article>
+      <iframe data-src="http://gregthebusker.com/iframedemo.html"></iframe>
+    </article>
+  </slide>
+
+  <slide class="segue quote nobackground">
+    <article class="flexbox vleft">
+      <h3 class="black">
+        Player API <a href="https://developers.google.com/youtube/getting_started#player_apis">https://developers.google.com/youtube/getting_started#player_apis</a>
+      </h3>
+    </article>
+  </slide>
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>The JavaScript API</h2>
+      <h3>Communication</h3>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Poll the URL fragment?
+          <br>
+          <span style="color:#000;">http://youtube.com/embed/video_id</span><span class="red">#fragment</span>
+        </li>
+        <li>Messages are one dimensional</li>
+        <li>Polling eats up CPU and is not instant</li>
+        <li>Both directions of communication use the same fragment</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>The JavaScript API</h2>
+      <h3>Communication</h3>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Better idea: PostMessage API
+          <br>
+          <span style="color:#000;">someWindow.<span class="red">postMessage</span>(message, targetOrigin);</span>
+        </li>
+        <li>Uses JSON for native encoding and decoding of data</li>
+        <li>No polling</li>
+        <li>Native event listeners</li>
+        <li>Communications are sandboxed per-window</li>
+        <li>Calls are asynchronous</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill nobackground">
+    <hgroup>
+      <h2>Conclusion</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Flash is still preferred in most places
+          <ul>
+            <li>More critical features</li>
+            <li>Deeper reach</li>
+          </ul>
+        </li>
+        <li>HTML5 is awesome
+          <ul>
+            <li>Improves every day</li>
+            <li>Greater mobile reach</li>
+            <li>People want it</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </slide>
+</group>
