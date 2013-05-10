@@ -6,7 +6,7 @@ aside.gdbar img {
 
 
 slides slide:not(.nobackground):before {
-  content: "#mov06 http://creativecommons.org/licenses/by-nc-sa/3.0/";
+  content: "#codemotion http://creativecommons.org/licenses/by-nc-sa/3.0/";
   background: url(../../images/codemotion_rome/logo_square.png) no-repeat 0 50%;
   -webkit-background-size: 30px 30px;
   -moz-background-size: 30px 30px;
