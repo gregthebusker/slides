@@ -1377,7 +1377,7 @@ body {
     </hgroup>
     <article>
       <pre class="prettyprint" data-lang="html">
-&lt;iframe type="text/html"&gt;
+&lt;iframe type="text/html"
   width="640"
   height="385"
   frameborder="0"
