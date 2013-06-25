@@ -1120,7 +1120,6 @@ body {
         <li>Features</li>
         <li>Accessibility</li>
         <li>"Device-ability"</li>
-        <li>Security</li>
         <li>Embeds</li>
         <li>API</li>
       </ul>
